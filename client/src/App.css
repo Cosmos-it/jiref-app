@@ -1,0 +1,498 @@
+@import url("./css/Main.css");
+@import url("./css/Card-design.css");
+
+html body {
+  background: #ffffff;
+}
+
+.widget h6 {
+  color: white;
+}
+
+.top-form {
+  padding-top: 200px;
+}
+
+.top {
+  margin-top: 100px;
+}
+
+
+.bottom {
+  margin-bottom: 90px;
+}
+p {
+  font-weight: 300;
+}
+
+label {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+}
+.social-media a {
+  font-size: 20px;
+}
+
+.skills ul {
+  margin: 0;
+  padding: 0;
+}
+
+.jiref-list li {
+  display: inline;
+}
+.skills ul {
+  display: inline;
+}
+.skills ul li {
+  list-style: none;
+  display: inline;
+}
+
+.social-media ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline;
+}
+
+.wrapper {
+  margin-top: -9px;
+}
+
+::-webkit-datetime-edit {
+  padding: 1em;
+}
+
+::-webkit-datetime-edit-month-field {
+  color: blue;
+}
+::-webkit-datetime-edit-day-field {
+  color: green;
+}
+
+::-webkit-datetime-edit-year-field {
+  color: purple;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+.form-control::placeholder {
+  color: rgb(155, 155, 155) !important;
+}
+
+
+.module-cover {
+  left: 0;
+  margin-top:-20px;
+  background: url("./assets/img/diverse.jpeg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.background-center {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  left: 0;
+  top:0;
+  background: url("./assets/img/everyone.jpeg") center center no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
+
+.login-background {
+  left: 0;
+  background: url("./assets/img/people-1.jpeg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Spinner */
+.smt-spinner-circle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #6f42c1;
+  border-radius: 50%;
+}
+
+.smt-spinner-inner-circle {
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  margin: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.smt-spinner {
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  border-right: 25px solid rgba(255, 255, 255, 0.6);
+  border-top: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  animation: rotate--spinner 1.6s infinite;
+}
+
+@keyframes rotate--spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wrapper {
+    margin-top: 3px;
+  }
+  .col-md-3.stand-alone-profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.tooltip {
+  display: none;
+}
+.tooltip-on-hover:hover + .tooltip {
+  display: block;
+}
+
+.jiref-margin {
+  width: 150px;
+}
+
+.profile-item {
+  color: #666666;
+}
+
+.profile-item:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+/* .module-cover .btn-join:hover {
+  
+} */
+
+.button-join {
+  border-radius: 40px;
+  background-color: #23c9b3;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-join span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.button-join span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-join:hover span {
+  padding-right: 25px;
+}
+
+.button-join:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.skills .btn-circle {
+  padding: 10px;
+}
+
+.blockquote {
+  background: #f9f9f9;
+  margin: 16em 1em 0em;
+  padding: 0.5em 1em;
+  quotes: "\201C" "\201D";
+  border-radius: 40px;
+  border: 10px solid #98c9c5;
+  color: #000000;
+  background-color: #d5bb80;
+}
+
+.blockquote p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #35435a; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #35435a; }
+}
+
+
+.jf-animation {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+.jiref-list-profile {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.title {
+  font-weight: 300;
+}
+
+.profile-item p {
+  margin: -5px;
+}
+
+/* Dashboard styling */
+.education-dash p {
+  margin: -5px;
+}
+.education-dash {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.experience-dash p {
+  margin: -5px;
+}
+.experience-dash {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.project-dash p {
+  margin: -5px;
+}
+.project-dash {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.credentails p {
+  margin: -5px;
+}
+
+.label-style {
+  margin: 0em;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.label-style {
+  font-size: 25px;
+}
+
+/*  Custom UI styles */
+.jiref-post-bg {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.jiref-padding {
+  padding: 20px;
+}
+
+.jiref-margin-top {
+  padding-top: 15px;
+}
+
+.thumbs {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.jiref-card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+}
+
+.col-md-3.stand-alone-profile img {
+  border-radius: 0px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#rounded-circle {
+  width: 150px;
+  border-radius: 30px;
+}
+.delete {
+  color: #b32400;
+}
+.like {
+  padding-right: 3em;
+  color: #66b3ff;
+}
+
+button .like-btn {
+  padding: 2px 30px;
+}
+
+.jiref-button-sm:hover {
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  color: #999999;
+  padding: 2px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.jiref-button-sm {
+  border-radius: 3px;
+  background: none;
+  color: #999999;
+  padding: 2px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Post related */
+.rounded-circle-post {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  float: left;
+}
+
+.jiref-profile-image {
+  border-bottom: 1px solid #f5f5f5;
+  height: 45px;
+}
+
+.jiref-post-header {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.jiref-post-header p {
+  font-size: 15px;
+}
+
+.jiref-post-functions {
+  padding: 10px;
+}
+
+.jiref-post-header p {
+  color: #8c8c8c;
+}
+
+.jiref-post-content h6 {
+  color: #666666;
+}
+
+.jiref-post-content {
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.like button {
+  border: none;
+}
+
+.jiref-post-content p {
+  font-size: 15px;
+}
+
+.jiref-post-footer {
+  font-size: 10px;
+}
+/* Posted related ends */
+
+.jiref-border {
+  border: 1px solid #f5f5f5;
+  background: #f8f8f8;
+}
+
+.jiref-padding-lt {
+  padding-left: 20px;
+}
+
+.jiref-padding-rt {
+  padding-right: 20;
+}
+
+.jiref-margin-lt {
+  margin-left: 20;
+}
+
+.jiref-margin-rt {
+  margin-right: 20px;
+}
+
+.jiref-margin-bottom {
+  margin-bottom: 20px;
+}
