@@ -55,7 +55,7 @@ class Search extends Component {
               className="form-control form-control-lg"
               type="text"
               name="searchTerm"
-              placeholder="Start Typing"
+              placeholder="Start searching..."
               value={this.state.searchTerm}
               onChange={this.onChange}
               autoFocus/>

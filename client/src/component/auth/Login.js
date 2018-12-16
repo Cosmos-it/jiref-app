@@ -54,18 +54,18 @@ class Login extends Component {
     const { errors, profile } = this.state;
 
     return (
-      <div className="login-background">
-        <div className="container top-form">
+      <div className="register-login">
+        <div className="container">
           <div className="row">
             <div className="col-md-6 m-auto">
               {/* Form */}
-              <div className="card-1 z-index-10 jiref-post-bg">
+              <div className="jiref-post-bg">
               <h4 className="text-center jiref-margin-top">Sign in</h4>
 
                 <div className="card-body">
                   <form onSubmit={this.onSubmit}>
                     <TextFieldGroup
-                      placeholder="Email Address"
+                      placeholder="Enter your email"
                       name="email"
                       type="email"
                       value={this.state.email}
@@ -74,7 +74,7 @@ class Login extends Component {
                     />
 
                     <TextFieldGroup
-                      placeholder="Password"
+                      placeholder="Enter your password"
                       name="password"
                       type="password"
                       value={this.state.password}
@@ -82,14 +82,14 @@ class Login extends Component {
                       error={errors.password}
                     />
 
-                    <input type="submit" className="btn btn-info btn-block mt-4" />
+                    <input type="submit" className="btn btn-info button-join btn-block mt-4" />
 
                   </form>
                 </div>
               </div>
               {/* End of form */}
               <p className="lead text-center">
-                Dont have an account yet? <Link className="nav-link" to="/register">Create account </Link>
+                Don't have an account yet? <Link className="nav-link" to="/register">Create account </Link>
               </p>
             </div>
           </div>

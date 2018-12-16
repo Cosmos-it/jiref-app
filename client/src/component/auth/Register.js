@@ -51,18 +51,18 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="login-background">
-        <div className="container top-form">
+      <div className="register-login">
+        <div className="container">
           <div className="row">
             <div className="col-md-6 m-auto">
               {/************ Form **************/}
-              <div className="card-1 z-index-10 jiref-post-bg">
+              <div className="jiref-post-bg">
                 <h4 className="text-center jiref-margin-top">Create an account</h4>
 
                 <div className="card-body">
                   <form noValidate onSubmit={this.onSubmit}>
                     <TextFieldGroup
-                      placeholder="Full name"
+                      placeholder="Enter your full name"
                       name="name"
                       type="text"
                       value={this.state.name}
@@ -71,7 +71,7 @@ class Register extends Component {
                     />
 
                     <TextFieldGroup
-                      placeholder="Email"
+                      placeholder="Enter your email"
                       name="email"
                       type="text"
                       value={this.state.email}
@@ -79,13 +79,11 @@ class Register extends Component {
                       error={errors.email}
                     />
 
-                    <small className="form-text text-muted">
-                      This site uses Gravatar so if you want a profile image, use
-                      a Gravatar email
+                    <small className="form-text text-muted text-center text-info">
+                      Uses Gravatar email for profile.
                            </small>
-
                     <TextFieldGroup
-                      placeholder="Password"
+                      placeholder="Enter new password"
                       name="password"
                       type="password"
                       value={this.state.password}
@@ -94,14 +92,14 @@ class Register extends Component {
                     />
 
                     <TextFieldGroup
-                      placeholder="Confirm password"
+                      placeholder="Confirm new password"
                       name="password2"
                       type="password"
                       value={this.state.password2}
                       onChange={this.onChange}
                       error={errors.password2}
                     />
-                    <input type="submit" className="btn btn-info btn-block mt-4" />
+                    <input type="submit" className="btn btn-info btn-block mt-4 button-join" />
                   </form>
                 </div>
               </div>

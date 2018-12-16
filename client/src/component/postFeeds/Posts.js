@@ -38,7 +38,10 @@ class Posts extends Component {
           <div className="row">
             <div className="col-md-10 m-auto">
               <div className="row">
-                <StandAloneProfile />
+              <div className="col-md-3">             
+                 <StandAloneProfile />
+
+              </div>
                 <div className="col-md-9">
                   <PostForm />
                   {post_content}

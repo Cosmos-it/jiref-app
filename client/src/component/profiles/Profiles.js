@@ -11,7 +11,7 @@ class Profiles extends Component {
 
   render() {
     return (
-      <div className="profiles" style={{ 'marginTop': '80px' }}>
+      <div className="profiles top">
         <div className="container">
           <div className="row">
             <div className="col-md-10 m-auto">

@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import "./Nav.css"
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { clearCurrentProfile } from "../../actions/profileActions";
 
-
 class Navbar extends Component {
   constructor(props) {
-
     super(props);
     this.state = {
       toggleMenu: false
@@ -31,13 +28,12 @@ class Navbar extends Component {
   }
 
   render() {
-
     let slideClass;
     this.state.toggleMenu ? slideClass = 'slideInLeft slide-menu' : slideClass = 'slideInRight';
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
-      <ul className="navbar-nav mr-auto">
+      <ul className="nav justify-content-end">
         <li className="nav-item">
           <Link className="nav-link" to="/feed" data-toggle="offcanvas" >
             Home{" "}
@@ -86,8 +82,9 @@ class Navbar extends Component {
     );
 
     const guestLinks = (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
+      
+      <ul className="nav justify-content-end">
+      <li className="nav-item">
           <Link className="nav-link" data-toggle="offcanvas" to="/register">
             Sign Up{" "}
           </Link>
@@ -123,12 +120,16 @@ class Navbar extends Component {
       </nav>
     );
 
-    return (
-      <nav className="navbar navbar-light bg-light justify-content-between" style={{color: 'black'}}>
-        <Link className="logo" to={'/'} style={{ 'fontSize': '1.5rem', 'fontWeight': 'bold',color: 'black'}}><p>Jíref</p></Link>
+    const currentWorkingNav = (
+      <nav className="navbar navbar-light bg-light justify-content-between" id="navbar">
+      <div className="container">
+        <Link className="logo" to={'/'} style={{ 'fontSize': '1.5rem', 'fontWeight': 'bold' }}><p>JIREF</p></Link>
+          {isAuthenticated ? authLinks : guestLinks}  
+      </div>
       </nav>
+    );
 
-    )
+    return (<div>{currentWorkingNav}</div>)
   }
 }
 

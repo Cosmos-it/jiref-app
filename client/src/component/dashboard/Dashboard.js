@@ -77,7 +77,7 @@ class Dashboard extends Component {
           <div className="col-md-8 m-auto jiref-post-bg">
             <label className="display-6"><i className="fas fa-bars"></i> {' '}Dashboard</label>
             {dashboardContent}
-          </div>s
+          </div>
         </div>
       </div>
     )

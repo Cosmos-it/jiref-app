@@ -7,11 +7,11 @@ class StandAloneProfile extends Component {
   render() {
     const { auth } = this.props;
     return (
-      // <div className="col-md-3">
-      <div className="text-center">
-          <img src={auth.user.avatar} alt="profile" className="rounded-circle jiref-margin"/>
+      <div className="standalone-profile">
+        <div className="text-center">
+          <img src={auth.user.avatar} alt="profile" className="rounded-circle jiref-margin" />
         </div>
-      // </div>
+      </div>
     )
   }
 }
