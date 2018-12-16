@@ -59,6 +59,7 @@
 
 .col-md-4:nth-child(1) {
   color: #23c9b3;
+  cursor: pointer;
 }
 
 .col-md-4:nth-child(1) h4 {
@@ -68,6 +69,8 @@
 
 .col-md-4:nth-child(2) {
   color: #35435a;
+  cursor: pointer;
+
 }
 
 .col-md-4:nth-child(2) h4 {
@@ -77,6 +80,8 @@
 
 .col-md-4:nth-child(3) {
   color: #d5bb80;
+  cursor: pointer;
+
 }
 .col-md-4:nth-child(3) h4 {
   height: 100%;
@@ -85,6 +90,8 @@
 
 .col-md-4:nth-child(4) {
   color: #98c9c5;
+  cursor: pointer;
+
 }
 .col-md-4:nth-child(4) h4 {
   height: 100%;
@@ -97,6 +104,8 @@
 }
 .col-md-4:nth-child(5) {
   color: #e47127;
+  cursor: pointer;
+
 }
 
 .col-md-4:nth-child(6) h4 {
@@ -106,6 +115,7 @@
 
 .col-md-4:nth-child(6) {
   color: #6e8994;
+  cursor: pointer;
 }
 
 .card-icon {

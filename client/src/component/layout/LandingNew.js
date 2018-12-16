@@ -28,26 +28,23 @@ class LandingNew extends Component {
       textAlign: "center"
     };
 
+    let offsets = document.getElementsByClassName('module');
+    console.log(offsets);
+
     return (
       <div className="">
         {/* <!-- Hero--> */}
         <section className="module-cover">
           <div className="container">
             <div className="row">
+
               <div className="col-md-10 m-auto text-center">
-                <div
-                  className="blockquote"
-                  style={{ fontWeight: "400", fontSize: "1.5rem" }}
-                >
+                <div className="blockquote" style={{ fontWeight: "400", fontSize: "1.5rem" }}>
                   <p>Connect and collaborate with mentors and mentees</p>
                 </div>
                 <br />
-                <Link
-                  to="/waitlist"
-                  id="btn"
-                  className="btn btn-lg btn-primary button-join"
-                  onClick={this.showModal}
-                >
+
+                <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
                   <span style={{ textTransform: "" }}>Join beta today</span>
                 </Link>
                 {/* Modal testing */}
@@ -70,6 +67,8 @@ class LandingNew extends Component {
             </h2>
           </div>
         </div>
+
+        {/* Display background */}
         <div className="row background-center" />
 
         <div className="row areas-of-focus">
