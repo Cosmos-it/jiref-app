@@ -51,65 +51,67 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="container top-form">
-        <div className="row">
-          <div className="col-md-6 m-auto">
-            {/************ Form **************/}
-            <div className="card-1 z-index-10 jiref-post-bg">
-            <h4 className="text-center jiref-margin-top">Create an account</h4>
+      <div className="login-background">
+        <div className="container top-form">
+          <div className="row">
+            <div className="col-md-6 m-auto">
+              {/************ Form **************/}
+              <div className="card-1 z-index-10 jiref-post-bg">
+                <h4 className="text-center jiref-margin-top">Create an account</h4>
 
-              <div className="card-body">
-                <form noValidate onSubmit={this.onSubmit}>
-                  <TextFieldGroup
-                    placeholder="Full name"
-                    name="name"
-                    type="text"
-                    value={this.state.name}
-                    onChange={this.onChange}
-                    error={errors.name}
-                  />
+                <div className="card-body">
+                  <form noValidate onSubmit={this.onSubmit}>
+                    <TextFieldGroup
+                      placeholder="Full name"
+                      name="name"
+                      type="text"
+                      value={this.state.name}
+                      onChange={this.onChange}
+                      error={errors.name}
+                    />
 
-                  <TextFieldGroup
-                    placeholder="Email"
-                    name="email"
-                    type="text"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    error={errors.email}
-                  />
+                    <TextFieldGroup
+                      placeholder="Email"
+                      name="email"
+                      type="text"
+                      value={this.state.email}
+                      onChange={this.onChange}
+                      error={errors.email}
+                    />
 
-                  <small className="form-text text-muted">
-                    This site uses Gravatar so if you want a profile image, use
-                    a Gravatar email
+                    <small className="form-text text-muted">
+                      This site uses Gravatar so if you want a profile image, use
+                      a Gravatar email
                            </small>
 
-                  <TextFieldGroup
-                    placeholder="Password"
-                    name="password"
-                    type="password"
-                    value={this.state.password}
-                    onChange={this.onChange}
-                    error={errors.password}
-                  />
+                    <TextFieldGroup
+                      placeholder="Password"
+                      name="password"
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.onChange}
+                      error={errors.password}
+                    />
 
-                  <TextFieldGroup
-                    placeholder="Confirm password"
-                    name="password2"
-                    type="password"
-                    value={this.state.password2}
-                    onChange={this.onChange}
-                    error={errors.password2}
-                  />
-                  <input type="submit" className="btn btn-info btn-block mt-4" />
-                </form>
+                    <TextFieldGroup
+                      placeholder="Confirm password"
+                      name="password2"
+                      type="password"
+                      value={this.state.password2}
+                      onChange={this.onChange}
+                      error={errors.password2}
+                    />
+                    <input type="submit" className="btn btn-info btn-block mt-4" />
+                  </form>
+                </div>
               </div>
-            </div>
 
-            {/* End of Form */}
+              {/* End of Form */}
 
-            <p className="lead text-center"> By signing up, you agree to the terms of service
+              <p className="lead text-center"> By signing up, you agree to the terms of service
               <Link className="nav-link" to="/login">{' '} Login </Link>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>

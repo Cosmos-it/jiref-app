@@ -29,13 +29,24 @@ html body {
   }
 }
 
+.invalid-feedback {
+  text-align: center;
+}
 .widget h6 {
   color: white;
 }
 
 .top-form {
-  padding-top: 200px;
+  padding-top: 250px;
 }
+.top-form .title {
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 
 .top {
   margin-top: 100px;
@@ -119,22 +130,23 @@ label {
 .module-cover {
   left: 0;
   margin-top:-20px;
-  background: url("./assets/img/diverse.jpeg") center center no-repeat;
+  background: url("./assets/img/everyone.jpeg") center center no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
 .background-center {
-  margin-top: 70px;
+  margin-top:-20px;
   margin-bottom: 70px;
   left: 0;
   top:0;
-  background: url("./assets/img/everyone.jpeg") center center no-repeat;
+  background: url("./assets/img/1diverse.jpeg") center center no-repeat;
   background-size: cover;
   height: 20vh;
 }
 
 .login-background {
+  margin-top:-20px;
   left: 0;
   background: url("./assets/img/people-1.jpeg") center center no-repeat;
   background-size: cover;
@@ -233,6 +245,17 @@ label {
   padding: 20px;
   transition: all 0.5s;
   cursor: pointer;
+  margin: 5px;
+}
+
+.in-put-custom {
+  border-radius: 40px;
+  border: 1px solid #23c9b3;
+  color: #23c9b3;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  transition: all 0.5s;
   margin: 5px;
 }
 
