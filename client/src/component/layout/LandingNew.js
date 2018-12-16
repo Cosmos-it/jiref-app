@@ -28,9 +28,6 @@ class LandingNew extends Component {
       textAlign: "center"
     };
 
-    let offsets = document.getElementsByClassName('module');
-    console.log(offsets);
-
     return (
       <div className="">
         {/* <!-- Hero--> */}
