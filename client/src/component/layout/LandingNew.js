@@ -69,7 +69,7 @@ class LandingNew extends Component {
         <div className="row background-center" />
 
         <div className="row areas-of-focus">
-          <div className="col-md-4 m-auto">
+          <div className="col-md-3 m-auto">
             <h2>Areas of focus</h2>
             <div>
               <ul className="list-group">
