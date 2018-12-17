@@ -57,7 +57,7 @@ class Register extends Component {
             <div className="col-md-6 m-auto">
               {/************ Form **************/}
               <div className="jiref-post-bg">
-                <h4 className="text-center jiref-margin-top">Create an account</h4>
+                <h4 className="text-center">Create an account</h4>
 
                 <div className="card-body">
                   <form noValidate onSubmit={this.onSubmit}>
@@ -82,6 +82,7 @@ class Register extends Component {
                     <small className="form-text text-muted text-center text-info">
                       Uses Gravatar email for profile.
                            </small>
+
                     <TextFieldGroup
                       placeholder="Enter new password"
                       name="password"
@@ -99,7 +100,9 @@ class Register extends Component {
                       onChange={this.onChange}
                       error={errors.password2}
                     />
+
                     <input type="submit" className="btn btn-info btn-block mt-4 button-join" />
+                    
                   </form>
                 </div>
               </div>

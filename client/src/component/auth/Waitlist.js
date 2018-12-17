@@ -56,69 +56,75 @@ class WishList extends Component {
     return (
 
       <div>
-      <div className="top-form background-center">
-        <div className="container">
-          <div className="title">
-            <h2 className="text-center">Join the knowledge venture</h2>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 col-md-8 m-auto">
-              <div className="">
-                <div className="card-body">
-                  {
-                    this.state.success ?
-                      <div className="card text-center" style={{ 'backgroundColor': 'green', 'padding': '20px', 'color': '#FFFFFF', }}>
-                        <p className="">Thank you for your precious time</p>
-                      </div> : null}
+        <div className="top-form background-center">
 
-                  {!this.state.success ?
-                    <form onSubmit={this.onSubmit} id="contact-form">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          className={classnames("form-control in-put-custom form-control-lg", {
-                            "is-invalid": errors.fullname
-                          })}
-                          placeholder="Enter your name"
-                          name="fullname"
-                          value={this.state.fullname}
-                          onChange={this.onChange}
-                        />
-                        {errors.fullname && (
-                          <div className="invalid-feedback">{errors.fullname}</div>
-                        )}
-                      </div>
+          <div className="top-form-style">
+            <div className="container">
+              <div className="title">
+                <h2 className="text-center">Join the knowledge venture</h2>
+              </div>
+              <div className="row">
+                  <div className="col-lg-6 col-md-8 m-auto">
+                  <div className="jiref-post-bg">
 
-                      <div className="form-group">
-                        <input
-                          type="email"
-                          className={classnames("form-control in-put-custom form-control-lg", {
-                            "is-invalid": errors.email
-                          })}
-                          placeholder="Enter your email"
-                          name="email"
-                          value={this.state.email}
-                          onChange={this.onChange}
-                        />
-                        {errors.email && (
-                          <div className="invalid-feedback">{errors.email}</div>
-                        )}
+                    <div className="">
+                      <div className="card-body">
+                        {
+                          this.state.success ?
+                            <div className="text-center" style={{ 'color': 'green', 'padding': '20px',fontSize: '30px' }}>
+                              <p className="">Thank you for joining</p>
+                            </div> : null}
+
+                        {!this.state.success ?
+                          <form onSubmit={this.onSubmit} id="contact-form">
+                            <div className="form-group">
+                              <input
+                                type="text"
+                                className={classnames("form-control in-put-custom form-control-lg", {
+                                  "is-invalid": errors.fullname
+                                })}
+                                placeholder="Enter your name"
+                                name="fullname"
+                                value={this.state.fullname}
+                                onChange={this.onChange}
+                              />
+                              {errors.fullname && (
+                                <div className="invalid-feedback">{errors.fullname}</div>
+                              )}
+                            </div>
+
+                            <div className="form-group">
+                              <input
+                                type="email"
+                                className={classnames("form-control in-put-custom form-control-lg", {
+                                  "is-invalid": errors.email
+                                })}
+                                placeholder="Enter your email"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.onChange}
+                              />
+                              {errors.email && (
+                                <div className="invalid-feedback">{errors.email}</div>
+                              )}
+                            </div>
+                            <input
+                              type="submit"
+                              className="btn btn-info btn-block mt-4 button-join"
+                            />
+                          </form>
+                          : null}
                       </div>
-                      <input
-                        type="submit"
-                        className="btn btn-info btn-block mt-4 button-join"
-                      />
-                    </form>
-                    : null}
+                    </div>
+                  </div>
+                  {/* End of form */}
                 </div>
               </div>
-              {/* End of form */}
             </div>
           </div>
         </div>
-        </div>
 
-       
+
       </div>
     );
   }

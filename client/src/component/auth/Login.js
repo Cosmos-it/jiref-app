@@ -60,8 +60,7 @@ class Login extends Component {
             <div className="col-md-6 m-auto">
               {/* Form */}
               <div className="jiref-post-bg">
-              <h4 className="text-center jiref-margin-top">Sign in</h4>
-
+              <h4 className="text-center">Sign in</h4>
                 <div className="card-body">
                   <form onSubmit={this.onSubmit}>
                     <TextFieldGroup
@@ -81,12 +80,11 @@ class Login extends Component {
                       onChange={this.onChange}
                       error={errors.password}
                     />
-
                     <input type="submit" className="btn btn-info button-join btn-block mt-4" />
-
                   </form>
                 </div>
               </div>
+
               {/* End of form */}
               <p className="lead text-center">
                 Don't have an account yet? <Link className="nav-link" to="/register">Create account </Link>

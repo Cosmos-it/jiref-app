@@ -1,5 +1,32 @@
 
 .register-login {
-  margin-top: 150px;
+  padding-top: 150px;
+  background-image:linear-gradient(to bottom right, #23c9b3, #d5bb80);
+  margin-top:-20px;
+  height: 100vh;
 }
 
+.top-form-style {
+  margin-top:-20px;
+  background-image:linear-gradient(to bottom right, #23c9b3, #d5bb80);
+  height: 100vh;
+  padding-top:50px;
+}
+
+
+.register-login p {
+  margin-top:50px;
+  font-size: 15px;
+  color: white;
+}
+
+.register-login a {
+  color: white;
+
+}
+
+
+
+.jiref-post-bg {
+  padding: 40px;
+}
