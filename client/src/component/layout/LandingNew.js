@@ -25,6 +25,7 @@ class LandingNew extends Component {
     const coming = {
       marginTop: "80px",
       marginBottom: "80px",
+      padding: '40px',
       textAlign: "center"
     };
 
@@ -36,7 +37,7 @@ class LandingNew extends Component {
             <div className="row">
               <div className="col-md-10 m-auto text-center">
                 <div className="blockquote">
-                  <p>Platform for mentors & mentees</p>
+                  <p>A platform for the right things</p>
                 </div>
                 <br />
                 <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
@@ -57,8 +58,7 @@ class LandingNew extends Component {
         <div className="row">
           <div className="col-md-12" style={coming}>
             <h2>
-              Knowledge is foundation when diverse mentors and mentees share
-              experiences
+              Join the network of deverse mentors and build an impressive portfolio.
             </h2>
           </div>
         </div>
@@ -90,15 +90,11 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>MENTORSHIP</h4>
+                    <h4>MEET A MENTOR</h4>
                     <i className="far fa-thumbs-up card-icon" />
                     <p className="overlay">
-                      If you want to learn the ins and outs of your industry, a
-                      mentor from the industry can help speed up your next
-                      career moves.
-                      <br />
-                      Mentorship brings out the best in you that you otherwise
-                      don't know.
+                      Connect with a mentor to seek guidiance. 
+                      Mentorship exposes you to specific skills that might help you nagivate life/career.
                     </p>
                   </div>
                 </div>
@@ -106,13 +102,10 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>OBJECTIVES</h4>
+                    <h4>YOUR OBJECTIVES</h4>
                     <i className="fas fa-tasks card-icon" />
                     <p className="overlay">
-                      Mentorship enables you to discuss your career aspirations,
-                      for example in software engineering/development,
-                      marketing, product management, etc. This creates a purpose
-                      for you on the platform moving forward.{" "}
+                      Discuss your career aspirations in software engineering/development, marketing, product management, coachingetc.
                     </p>
                   </div>
                 </div>
@@ -120,13 +113,10 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>MASTERMIND</h4>
+                    <h4>JOIN MASTERMIND</h4>
                     <i className="fas fa-users card-icon" />
                     <p className="overlay">
-                      Find groups or anyone on the platform that wants to help
-                      or work on a particular project so that you can both be
-                      accountable to each others success. Brainstorm ideas and
-                      start crafting meaningful thoughts as a team of learners.
+                      Join groups to brainstorm ideas and start crafting meaningful thoughts as you learn to be a team of player.
                     </p>
                   </div>
                 </div>
@@ -134,13 +124,10 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>PORTFOLIO</h4>
+                    <h4>BUILD PORJECTS</h4>
                     <i className="fas fa-book card-icon" />
                     <p className="overlay">
-                      Normally, you want to choose a project to start. The
-                      projects allows for mistakes while improving your skills.
-                      Make use of the diverse experiences on the platform to get
-                      feedback.
+                      Improving your skills requires lots of practice and mistakes. The industry is moving in the "speed of light", don't be left behind.
                     </p>
                   </div>
                 </div>
@@ -148,33 +135,29 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>KNOWLEDGE</h4>
+                    <h4>LEARN NEW THINGS</h4>
                     <i className="far fa-lightbulb card-icon" />
                     <p className="overlay">
-                      Experience skills growth while working on the projects you
-                      created and chat with your mastermind teams. Knowledge can
-                      increase if do the difficult things you are scared of
-                      learning. Let your curiosity drive you forward.
+                      Keep learning new things and let your curiosity drive you forward. 
+                      Don't be too comfortable in one place.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="col-md-4">
+              {/* <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10 ">
-                    <h4>SUCCESS</h4>
+                    <h4>BECOME SUCCESSFUL</h4>
                     <i className="fas fa-trophy card-icon" />
                     <p className="overlay">
-                      Your success comes with time when you do all the above
-                      while being a passionate problem solver. Continue to
-                      challenge yourself and ask mentors to help you in areas of
+                      Continue to challenge yourself and ask mentors to help you in areas of
                       unfamiliarity so you succeed at work and outside of work.
                       Make it a habit and develop with passion.
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
