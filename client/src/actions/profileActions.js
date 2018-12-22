@@ -53,14 +53,14 @@ export const search = (data) => dispatch => {
 /**
  * @param {userA, userB } userA, userB)
  */
-export const onFollow = (userA,userB) => dispatch => {
+export const onFollow = (userA, userB) => dispatch => {
 
   const data = {
     userA: userA,
     userB: userB
   }
   axios.post(`/api.jiref.com/profile/followers`, data)
-  .then(res => {});
+    .then(res => { });
 }
 
 
@@ -200,7 +200,7 @@ export const updateEducation = (id, data) => dispatch => {
  * @param {*} data
  */
 export const updateExperience = (id, data) => dispatch => {
-  
+
   console.log("Updating experience");
 
 };
@@ -231,7 +231,7 @@ export const getExperienceById = (id) => (dispatch) => {
  */
 export const updateProject = (id, data) => dispatch => {
   console.log("Updating project");
-  
+
 };
 
 

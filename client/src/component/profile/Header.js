@@ -102,10 +102,11 @@ class Header extends Component {
 
       <div className="container">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
+          <div className="col-md-8 m-auto">
             <div className="row jiref-padding">
 
               <div className="col-md-12 m-auto text-center">
+
               {/*---------- Profile image------------*/}
                 <img
                   className="rounded-circle"
@@ -117,7 +118,9 @@ class Header extends Component {
                 {/*--------- User credentials ----------*/}
                 <div className="credentails">
                   <label className="label-style">{profile.user.name}</label>
-                  <p>{profile.status}</p>
+                  <br/>
+                  <p style={{fontSize: '20px'}}>{profile.status}</p>
+                  <br/>
                   <p><i className="fas fa-briefcase"></i>{' '}{profile.company}</p>
                   <p><i className="fas fa-map-marker-alt"></i>{' '}{profile.location}</p>
                 </div>

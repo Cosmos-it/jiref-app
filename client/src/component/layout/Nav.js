@@ -124,7 +124,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-light bg-light justify-content-between" id="navbar">
       <div className="container">
         <Link className="logo" to={'/'} style={{ 'fontSize': '1.5rem', 'fontWeight': 'bold' }}><p>JIREF</p></Link>
-          {/* {isAuthenticated ? authLinks : guestLinks}   */}
+          {isAuthenticated ? authLinks : guestLinks}  
       </div>
       </nav>
     );

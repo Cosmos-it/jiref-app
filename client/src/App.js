@@ -60,8 +60,8 @@ class App extends Component {
             <Nav />
             <Route exact path="/" component={LandingNew} />
             <Route exact path="/waitlist" component={WaitList} />
-            {/* <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} /> */}
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
             <Route exact path="/profiles" component={Profiles} />
             <Route exact path="/profile/me/:me" component={Profile} />
             <Route exact path="/profile/user/:id" component={Profile} />

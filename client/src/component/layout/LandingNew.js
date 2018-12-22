@@ -34,13 +34,11 @@ class LandingNew extends Component {
         <section className="module-cover">
           <div className="container">
             <div className="row">
-
               <div className="col-md-10 m-auto text-center">
-                <div className="blockquote" style={{ fontWeight: "400", fontSize: "1.5rem" }}>
-                  <p>Connect and collaborate with mentors and mentees</p>
+                <div className="blockquote">
+                  <p>Platform for mentors & mentees</p>
                 </div>
                 <br />
-
                 <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
                   <span style={{ textTransform: "" }}>Join beta today</span>
                 </Link>

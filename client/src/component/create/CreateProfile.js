@@ -102,10 +102,10 @@ class CreateProfile extends Component {
     ];
 
     return (
-      <div className="portfolio top">
+      <div className="portfolio">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto jiref-post-bg">
+            <div className="col-md-8 m-auto">
               <div className="">
                 <div className="card-body">
                   <Link to="/dashboard">Go Back</Link>

@@ -5,6 +5,7 @@ import { deleteComment } from "../../actions/postAction";
 import { Link } from "react-router-dom";
 
 class CommentItem extends Component {
+  
   onDeleteClick(postId, commentId) {
     this.props.deleteComment(postId, commentId);
   }
@@ -14,7 +15,6 @@ class CommentItem extends Component {
 
     return (
       <div className="card-s">
-        <div className="jiref-post-bg">
           <div>
             <div className="jiref-profile-image">
               <img src={comment.avatar}
@@ -38,13 +38,8 @@ class CommentItem extends Component {
             <div className="jiref-post-footer">
                 <span className="like">
                   {comment.user === auth.user.id ? (
-                    
                     <button
-                      onClick={this.onDeleteClick.bind(
-                        this,
-                        postId,
-                        comment._id
-                      )}
+                      onClick={this.onDeleteClick.bind(this,postId,comment._id)}
                       type="button"
                       className="mr-1 like-btn delete">
                       <i className="fas fa-trash" /> Delete
@@ -55,7 +50,7 @@ class CommentItem extends Component {
             </div>
             </div>
           </div>
-        </div>
+
     );
   }
 }

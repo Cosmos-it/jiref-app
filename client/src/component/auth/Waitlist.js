@@ -80,7 +80,7 @@ class WishList extends Component {
                             <div className="form-group">
                               <input
                                 type="text"
-                                className={classnames("form-control in-put-custom form-control-lg", {
+                                className={classnames("form-control input-custom form-control-lg", {
                                   "is-invalid": errors.fullname
                                 })}
                                 placeholder="Enter your name"
@@ -96,7 +96,7 @@ class WishList extends Component {
                             <div className="form-group">
                               <input
                                 type="email"
-                                className={classnames("form-control in-put-custom form-control-lg", {
+                                className={classnames("form-control input-custom form-control-lg", {
                                   "is-invalid": errors.email
                                 })}
                                 placeholder="Enter your email"

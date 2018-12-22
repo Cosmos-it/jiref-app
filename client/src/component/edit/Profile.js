@@ -153,16 +153,16 @@ class EditProfile extends Component {
     ];
 
     return (
-      <div className="container bottom top">
+      <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
+          <div className="col-md-8 m-auto">
             <div className="">
               <div className="card-body">
-                <Link to="/dashboard">Go Back</Link>
-                <p className="lead text-center">Edit Profile</p>{" "}
-                <small className="d-block pb-3">
-                  <span className="text-danger">*</span> = required fields
-                </small>
+              <Link to="/dashboard">Go Back</Link>
+
+              <h3 className="text-center">Edit Profile</h3>
+
+
                 <form onSubmit={this.onSubmit}>
                   <TextFieldGroup
                     placeholder="* Profile Handle"

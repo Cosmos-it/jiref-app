@@ -89,21 +89,16 @@ class EditEducation extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container top bottom">
+      <div className="container bottom">
           <div className="row">
             <div className="col-md-8 m-auto jiref-post-bg">
             <div className="">
               <div className="card-body">
-              <Link to="/dashboard" className="">
+              <Link to="/dashboard">
                 Go Back
               </Link>
-
               <h3 className="display-6 text-center">Edit Education</h3>
-              <p className="lead text-center">
-               Edit Education
-              </p>
-              <small className="d-block pb-3">* = required fields</small>
-
+  
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* School"

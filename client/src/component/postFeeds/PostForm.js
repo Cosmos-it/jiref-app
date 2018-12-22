@@ -44,28 +44,26 @@ class PostForm extends Component {
     const { errors } = this.state;
     const { auth } = this.props;
     return (
-      <div className="jiref-post-bg">
-        <div className="card jiref-padding">
-          <div className="jiref-profile-image">
-            <img src={auth.user.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
-            <div className="jiref-post-header">
-              <p>{auth.user.name}</p>
-            </div>
+      <div className="card jiref-padding">
+        <div className="jiref-profile-image">
+          <img src={auth.user.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
+          <div className="jiref-post-header">
+            <p>{auth.user.name}</p>
           </div>
-          <form onSubmit={this.onSubmit}>
-            <TextAreaFieldGroup
-              placeholder="Got something to share?..."
-              type="text"
-              name="text"
-              value={this.state.text}
-              onChange={this.onChange}
-              error={errors.text}
-            />
-            <div className="">
-              <button type="subtmit" value="Share" className="jiref-button-sm btn-circle btn-brand">post</button>
-            </div>
-          </form>
         </div>
+        <form onSubmit={this.onSubmit}>
+          <TextAreaFieldGroup
+            placeholder="Got something to share?..."
+            type="text"
+            name="text"
+            value={this.state.text}
+            onChange={this.onChange}
+            error={errors.text}
+          />
+          <div className="">
+            <button type="subtmit" value="Share" className="jiref-button-sm btn-circle btn-brand">post</button>
+          </div>
+        </form>
       </div>
 
     )

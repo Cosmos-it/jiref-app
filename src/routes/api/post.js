@@ -95,6 +95,7 @@ router.post('/like/:id', passport.authenticate('jwt', {
   }).then(profile => {
     Post.findById(req.params.id)
       .then(post => {
+        console.log('Liked from sever');
         if (post.likes.filter(like => like.user.toString() === req.user.id).length > 0) {
           return res
             .status(400)
@@ -107,10 +108,7 @@ router.post('/like/:id', passport.authenticate('jwt', {
           user: req.user.id
         });
         post.save().then(post => res.json(post));
-      })
-      .catch(err => res.status(400).json({
-        postnotfound: 'No post found'
-      }));
+      });
   });
 });
 

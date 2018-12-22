@@ -72,9 +72,9 @@ class Dashboard extends Component {
     }
 
     return (
-      <div className="container top">
+      <div className="container">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
+          <div className="col-md-8 m-auto">
             <label className="display-6"><i className="fas fa-bars"></i> {' '}Dashboard</label>
             {dashboardContent}
           </div>

@@ -41,7 +41,7 @@ class Profile extends Component {
       }
 
       return (
-         <div className="profile" style={{ 'marginTop': '80px', 'marginBottom': '80px'}}>
+         <div style={{ marginBottom: '80px'}}>
                {profileContent}
          </div>
       );

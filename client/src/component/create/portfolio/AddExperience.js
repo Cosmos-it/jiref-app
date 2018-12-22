@@ -63,19 +63,20 @@ class AddExperience extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container top bottom">
+      <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
-          <div className="">
+          <div className="col-md-8 m-auto">
+            <div className="">
               <div className="card-body">
-            <Link to="/dashboard" className="">
-              Go Back
+                <Link to="/dashboard" className="">
+                  Go Back
               </Link>
-            <p className="lead text-center">
-              Add any job or position that you have had in the past or current
+                <div className="text-center">
+                  <h3>Add experience</h3>
+                  <p>
+                    Add any job or position that you have had in the past or current
               </p>
-            <small className="d-block pb-3">Required fields <span className="danger">(*)</span></small>
-          
+                </div>
                 <form onSubmit={this.onSubmit}>
 
                   <TextFieldGroup

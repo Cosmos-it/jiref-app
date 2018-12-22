@@ -18,7 +18,7 @@ const TextFieldGroup = (
    return (
       <div className="form-group">
          <input type={type}
-           className={classnames('form-control in-put-custom form-control-lg TextFieldGroup', {
+           className={classnames('form-control input-custom form-control-lg TextFieldGroup', {
             'is-invalid':error
          })}
          placeholder={placeholder}

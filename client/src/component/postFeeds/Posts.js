@@ -19,7 +19,7 @@ class Posts extends Component {
   componentWillReceiveProps(nextProps) {
     if (!nextProps.profile.profile) {
       this.props.history.push('/dashboard');
-    } 
+    }
   }
 
   render() {
@@ -33,19 +33,23 @@ class Posts extends Component {
     }
 
     return (
-      <div className="top">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-10 m-auto">
-              <div className="row">
-              <div className="col-md-3">             
-                 <StandAloneProfile />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-10 m-auto">
 
+            <div className="row">
+              {/* Profile */}
+              <div className="col-md-3">
+                <StandAloneProfile />
               </div>
-                <div className="col-md-9">
-                  <PostForm />
-                  {post_content}
-                </div>
+
+              <div className="col-md-9">
+                {/* Post form */}
+                <PostForm />
+
+                {/* Display posts */}
+                {post_content}
+
               </div>
             </div>
           </div>
@@ -70,4 +74,5 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps, { get_posts, getCurrentProfile })(Posts);
+export default connect(mapStateToProps, { get_posts, getCurrentProfile })(Posts);   
+

@@ -4,36 +4,51 @@
 
 html body {
   background: #ffffff;
+  letter-spacing: 0.1em; /* Adjust as needed */
+}
+
+@media all and (max-width: 48rem) {
+  .blockquote {
+    margin: 6em 1em 0em;
+  }
 }
 
 @media all and (min-width: 48rem) {
 
   .blockquote p {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #35435a; /* The typwriter cursor */
+    border-right: 0.1em solid #35435a; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   }
-  
+
+  .blockquote {
+    margin: 14em 1em 0em;
+  }
   /* The typing effect */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-  
+
   /* The typewriter cursor effect */
   @keyframes blink-caret {
-    from, to { border-color: transparent }
+    from,
+    to {
+      border-color: transparent;
+    }
   }
 }
 
-.areas-of-focus{
- margin-bottom: 80px;
- padding: 40px;
+.areas-of-focus {
+  margin-bottom: 80px;
+  padding: 40px;
 }
 
 h2 {
@@ -61,15 +76,14 @@ h2 {
 }
 
 @media all and (max-width: 48rem) {
-.standalone-profile {
-  display:  none;
-}
+  .standalone-profile {
+    display: none;
+  }
 }
 
 .top {
   margin-top: 40px;
 }
-
 
 .bottom {
   margin-bottom: 90px;
@@ -144,27 +158,64 @@ label {
   color: rgb(155, 155, 155) !important;
 }
 
-
 .module-cover {
   left: 0;
-  margin-top:-20px;
-  background: url("./assets/img/everyone.jpeg") center center no-repeat;
+  margin-top: -20px;
   background-size: cover;
   height: 100vh;
+  background: radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 
+/* .module-cover {
+  left: 0;
+  margin-top: -20px;
+  background-color: #23c9b3;
+  background-image:
+  repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+  linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-size: 70px 120px;
+
+  background-size: cover;
+  height: 100vh;
+} */
+
 .background-center {
-  margin-top:-20px;
+  margin-top: -20px;
   margin-bottom: 70px;
   left: 0;
-  top:0;
+  top: 0;
   background: url("./assets/img/1diverse.jpeg") center center no-repeat;
   background-size: cover;
   height: 20vh;
 }
 
 .login-background {
-  margin-top:-20px;
+  margin-top: -20px;
   left: 0;
   background: url("./assets/img/people-1.jpeg") center center no-repeat;
   background-size: cover;
@@ -248,30 +299,39 @@ label {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-
 /* .module-cover .btn-join:hover {
   
 } */
 
 .button-join {
-  border-radius: 40px;
+  border-radius: 10px;
   background-color: #23c9b3;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-size: 18px;
-  padding: 20px;
+  padding: 10px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 }
 
-.in-put-custom {
-  border-radius: 40px;
+.input-textarea {
+  border: 1px solid #23c9b3;
+  height: 100px;
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.input-custom {
+  border-radius: 10px;
   border: 1px solid #23c9b3;
   color: #23c9b3;
-  font-size: 18px;
-  padding: 20px;
+  font-size: 12px;
+  padding: 10px;
   transition: all 0.5s;
   margin: 5px;
 }
@@ -284,7 +344,7 @@ label {
 }
 
 .button-join span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -307,13 +367,13 @@ label {
 
 .blockquote {
   background: #f9f9f9;
-  margin: 16em 1em 0em;
   padding: 0.5em 1em;
   quotes: "\201C" "\201D";
-  border-radius: 40px;
-  border: 10px solid #98c9c5;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  border: 1px solid #04d0bf;
   color: #000000;
-  background-color: #d5bb80;
 }
 
 .jf-animation {

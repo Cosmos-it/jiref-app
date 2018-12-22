@@ -1,23 +1,22 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import TextFieldGroup from '../../common/TextFieldGroup';
-import TextAreaFieldGroup from '../../common/TextAreaFieldGroup';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { addEducation } from '../../../actions/profileActions';
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+import TextFieldGroup from "../../common/TextFieldGroup";
+import TextAreaFieldGroup from "../../common/TextAreaFieldGroup";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addEducation } from "../../../actions/profileActions";
 
 class AddEducation extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      school: '',
-      degree: '',
-      fieldofstudy: '',
-      from: '',
-      to: '',
+      school: "",
+      degree: "",
+      fieldofstudy: "",
+      from: "",
+      to: "",
       current: false,
-      description: '',
+      description: "",
       errors: {},
       disabled: false
     };
@@ -29,8 +28,7 @@ class AddEducation extends Component {
     }
   }
 
-  onSubmit = (e) => {
-
+  onSubmit = e => {
     e.preventDefault();
     const eduData = {
       school: this.state.school,
@@ -43,36 +41,38 @@ class AddEducation extends Component {
     };
 
     this.props.addEducation(eduData, this.props.history);
-  }
+  };
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
-  onCheck = (e) => {
+  onCheck = e => {
     this.setState({
       disabled: !this.state.disabled,
       current: !this.state.current
     });
-  }
+  };
 
   render() {
+
     const { errors } = this.state;
 
     return (
-
-      <div className="container top bottom">
+      <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
+        
+          <div className="col-md-8 m-auto">
             <div className="">
               <div className="card-body">
                 <Link to="/dashboard" className="">
                   Go Back
-              </Link>
-                <p className="lead text-center">
-                  Add any school, bootcamp, etc that you have attended
-              </p>
-                <small className="d-block pb-3">* = required fields</small>
+                </Link>
+
+                <div className="text-center">
+                  <h3>Add education</h3>
+                  <p>Add any school, bootcamp, etc that you have attended</p>
+                </div>
 
                 <form onSubmit={this.onSubmit}>
                   <TextFieldGroup
@@ -117,9 +117,12 @@ class AddEducation extends Component {
                       onChange={this.onCheck}
                       id="current"
                     />
-                    <label htmlFor="current" className="form-check-label btn btn-outline-info">
+                    <label
+                      htmlFor="current"
+                      className="form-check-label btn btn-outline-info"
+                    >
                       Currently attending
-                     </label>
+                    </label>
                   </div>
 
                   <h6>To Date</h6>
@@ -129,7 +132,7 @@ class AddEducation extends Component {
                     value={this.state.to}
                     onChange={this.onChange}
                     error={errors.to}
-                    disabled={this.state.disabled ? 'disabled' : ''}
+                    disabled={this.state.disabled ? "disabled" : ""}
                   />
 
                   <TextAreaFieldGroup
@@ -152,7 +155,6 @@ class AddEducation extends Component {
           </div>
         </div>
       </div>
-
     );
   }
 }
@@ -168,6 +170,7 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addEducation })(
-  withRouter(AddEducation)
-);
+export default connect(
+  mapStateToProps,
+  { addEducation }
+)(withRouter(AddEducation));

@@ -39,6 +39,9 @@ import PropTypes from 'prop-types';
 
 // }
 
+
+
+
 const TextAreaFieldGroup = ({
   name,
   placeholder,
@@ -50,7 +53,8 @@ const TextAreaFieldGroup = ({
   return (
     <div className="form-group">
       <textarea 
-        className={classnames('form-control form-control-lg', {
+
+        className={classnames('input-textarea', {
           'is-invalid': error
         })}
         placeholder={placeholder}
@@ -72,5 +76,6 @@ TextAreaFieldGroup.propTypes = {
   error: PropTypes.string,
   onChange: PropTypes.func.isRequired
 };
+
 
 export default TextAreaFieldGroup;

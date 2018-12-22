@@ -64,18 +64,14 @@ class EditProject extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container top bottom">
+      <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto jiref-post-bg">
+          <div className="col-md-8 m-auto">
             <div className="">
               <div className="card-body">
-                <Link to="/dashboard" className="">
-                  Go Back
-                  </Link>
-                <p className="lead text-center">
-                  Edit Project
-              </p>                
-              <small className="d-block pb-3">* = required fields</small>
+                <Link to="/dashboard">Go Back</Link>
+
+                <h3 className="text-center">Edit Project</h3>
                 <form onSubmit={this.onSubmit}>
                   <TextFieldGroup
                     placeholder="Project name"

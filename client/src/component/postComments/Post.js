@@ -9,18 +9,19 @@ import Spinner from '../common/Spinner';
 import { getPost } from '../../actions/postAction';
 
 class Post extends Component {
+
   componentDidMount() {
     if (this.props.match.params.id) {
       this.props.getPost(this.props.match.params.id);
     }
-    this.props.getPost(this.props.post.id)
   }
 
   render() {
-    const { post, loading } = this.props.post;
+    const { post,loading } = this.props.post;
     let postContent;
+    let comments;
 
-    if (post === null || loading || Object.keys(post).length === 0) {
+    if (post === null || loading || Object.keys(post).length === 0 || post.comments == null) {
       postContent = <Spinner />;
     } else {
       postContent = (
