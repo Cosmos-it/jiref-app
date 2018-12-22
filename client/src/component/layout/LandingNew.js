@@ -90,8 +90,8 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>MEET A MENTOR</h4>
-                    <i className="far fa-thumbs-up card-icon" />
+                  <i className="far fa-thumbs-up card-icon" />
+                    <h4>Meet a mentor</h4>
                     <p className="overlay">
                       Connect with a mentor to seek guidiance. 
                       Mentorship exposes you to specific skills that might help you nagivate life/career.
@@ -102,8 +102,8 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>YOUR OBJECTIVES</h4>
                     <i className="fas fa-tasks card-icon" />
+                    <h4>Create an objective</h4>
                     <p className="overlay">
                       Discuss your career aspirations in software engineering/development, marketing, product management, coachingetc.
                     </p>
@@ -113,8 +113,8 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>JOIN MASTERMIND</h4>
-                    <i className="fas fa-users card-icon" />
+                  <i className="fas fa-users card-icon" />
+                    <h4>Join mastermind</h4>
                     <p className="overlay">
                       Join groups to brainstorm ideas and start crafting meaningful thoughts as you learn to be a team of player.
                     </p>
@@ -124,8 +124,8 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>BUILD PORJECTS</h4>
-                    <i className="fas fa-book card-icon" />
+                  <i className="fas fa-book card-icon" />
+                    <h4>Build projects</h4>
                     <p className="overlay">
                       Improving your skills requires lots of practice and mistakes. The industry is moving in the "speed of light", don't be left behind.
                     </p>
@@ -135,8 +135,8 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                    <h4>LEARN NEW THINGS</h4>
-                    <i className="far fa-lightbulb card-icon" />
+                  <i className="far fa-lightbulb card-icon" />
+                    <h4>Learn new things</h4>
                     <p className="overlay">
                       Keep learning new things and let your curiosity drive you forward. 
                       Don't be too comfortable in one place.
