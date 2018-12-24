@@ -8,6 +8,15 @@
   height: 100vh;
 }
 
+.about {
+  padding: 120px 20px;
+  background-image:linear-gradient(to bottom right, #23c9b3, #d5bb80);
+  margin-top:-20px;
+
+  height: 100vh;
+  color: white;
+}
+
 .top-form-style {
   margin-top:-20px;
   background-image:linear-gradient(to bottom right, #23c9b3, #d5bb80);

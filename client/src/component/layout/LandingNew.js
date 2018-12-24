@@ -38,7 +38,7 @@ class LandingNew extends Component {
             <div className="row">
               <div className="col-md-10 m-auto text-center">
                 <div className="blockquote">
-                  <p>Build the right skills quickly</p>
+                  <p>Gain invaluable skills on Jiref</p>
                 </div>
                 <br />
                 <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
@@ -58,9 +58,14 @@ class LandingNew extends Component {
 
         <div className="row">
           <div className="col-md-12" style={coming}>
-            <h2>
-              Join the network of deverse mentors and build an impressive portfolio.
-            </h2>
+            <h5>
+              Join the knowledge movement to build mpressive portfolio.
+            </h5>
+
+            <p className="lead">Wikipedia definition <br/>
+            <i><q>Mentorship is a relationship in which a more experienced or more knowledgeable person helps <br/>to guide a less experienced or less knowledgeable person</q>
+            </i></p>
+   
           </div>
         </div>
 

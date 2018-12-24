@@ -84,6 +84,12 @@ class Navbar extends Component {
     const guestLinks = (
       
       <ul className="nav justify-content-end">
+       <li className="nav-item">
+          <Link className="nav-link" data-toggle="offcanvas" to="/about">
+            About Us{" "}
+          </Link>
+        </li>
+
       <li className="nav-item">
           <Link className="nav-link" data-toggle="offcanvas" to="/register">
             Sign Up{" "}

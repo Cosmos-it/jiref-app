@@ -33,6 +33,9 @@ import EditEducation from './component/edit/Education';
 import EditExperience from './component/edit/Experience';
 import Posts from "./component/postFeeds/Posts";
 import Post from "./component/postComments/Post";
+import About from "./component/layout/About";
+import Jobs from "./component/layout/Jobs";
+import SuggestedProjects from './component/layout/SuggestedProjects';
 
 //  Check for token
 if (localStorage.jwtToken) {
@@ -62,6 +65,11 @@ class App extends Component {
             <Route exact path="/waitlist" component={WaitList} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/jobs" component={Jobs} />
+            <Route exact path="/projects" component={SuggestedProjects} />
+
+
             <Switch>
               <PrivateRoute exact path="/profiles" component={Profiles} />
               <PrivateRoute exact path="/profile/me/:me" component={Profile} />

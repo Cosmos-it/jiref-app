@@ -11,7 +11,6 @@ import Project from './Project';
 import StandAloneProfile from '../postFeeds/StandAloneProfile';
 
 
-
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
@@ -61,7 +60,20 @@ class Dashboard extends Component {
       } else {
         dashboardContent = (
           <div>
-            <p className="lead text-muted"> {user.name}</p>
+            <p className="lead"> {user.name}</p>
+            <p>Before you set your account, lets get some information to help personalize your experience on Jiref.
+            </p>
+            <label className="lead">Interested in what type of mentorship</label>
+            <div className="list-item">
+              <button type="button" class="btn btn-default btn-md">Software engineering</button>
+              <button type="button" class="btn btn-primary btn-md">Web dev</button>
+              <button type="button" class="btn btn-primary btn-md">Data science</button>
+              <button type="button" class="btn btn-primary btn-md">Leadership</button>
+              <button type="button" class="btn btn-primary btn-md">Mobile dev</button>
+              <button type="button" class="btn btn-primary btn-md">Career advice</button>
+              <button type="button" class="btn btn-primary btn-md">Career help</button>
+              <button type="button" class="btn btn-primary btn-md">College</button>
+            </div>
             <p>Please set a profile.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
               Create Profile
