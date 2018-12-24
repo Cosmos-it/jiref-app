@@ -45,7 +45,7 @@ class Dashboard extends Component {
             </p>
             <br/>
             <ProfileActions />
-            <div className="jiref-margin-top jiref-padding">
+            <div className="jiref-margin-top">
               <Education education={profile.education} />
               <Experience experience={profile.experience} />
               <Project project={profile.project} />

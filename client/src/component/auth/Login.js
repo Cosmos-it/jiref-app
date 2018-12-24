@@ -85,12 +85,11 @@ class Login extends Component {
                 </div>
               </div>
 
-
-
               {/* End of form */}
               <p className="lead text-center">
-                Don't have an account yet? <Link className="nav-link" to="/register">Create account </Link></p>  
-                </div>
+                Don't have an account yet? <Link className="nav-link" to="/register">Create account </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
