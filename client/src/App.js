@@ -47,7 +47,7 @@ if (localStorage.jwtToken) {
     // Clear current Profile
     store.dispatch(clearCurrentProfile());
     // Redirect to login
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 }
 
@@ -62,10 +62,10 @@ class App extends Component {
             <Route exact path="/waitlist" component={WaitList} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/profiles" component={Profiles} />
-            <Route exact path="/profile/me/:me" component={Profile} />
-            <Route exact path="/profile/user/:id" component={Profile} />
             <Switch>
+              <PrivateRoute exact path="/profiles" component={Profiles} />
+              <PrivateRoute exact path="/profile/me/:me" component={Profile} />
+              <PrivateRoute exact path="/profile/user/:id" component={Profile} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/feed" component={Posts} />
               <PrivateRoute exact path="/post/:id" component={Post} />

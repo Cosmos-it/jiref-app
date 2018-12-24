@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProfileActions = () => {
     return (
-      <div className="row nav-scroller bg-white shadow-sm">
+      <div className="row nav-scroller bg-white">
           <nav className="nav nav-underline">
               <Link to="/edit-profile" className="nav-link">
                   <i className="fas fa-edit"></i>{' '}Profile

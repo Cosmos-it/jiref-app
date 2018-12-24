@@ -72,7 +72,6 @@ export const getProfileById = id => dispatch => {
   axios
     .get(`/api.jiref.com/profile/user/${id}`)
     .then(res => {
-      console.log(res);
       dispatch({
         type: GET_PROFILE,
         payload: res.data

@@ -70,7 +70,6 @@ router.post('/register', (req, res) => {
 // @desc     Login User - Returning JWT Token
 // @access   Private
 router.post('/login', (req, res) => {
-
   const {
     errors,
     isValid

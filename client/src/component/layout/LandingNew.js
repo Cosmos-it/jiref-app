@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Modal from "../common/Modal";
 
 class LandingNew extends Component {
+  
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
@@ -37,7 +38,7 @@ class LandingNew extends Component {
             <div className="row">
               <div className="col-md-10 m-auto text-center">
                 <div className="blockquote">
-                  <p>A platform for the right things</p>
+                  <p>Build the right skills quickly</p>
                 </div>
                 <br />
                 <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
@@ -86,6 +87,8 @@ class LandingNew extends Component {
         {/* <!-- Posts--> */}
         <section className="module">
           <div className="container">
+          <h2>The process</h2>
+          <br/>
             <div className="row text-center">
               <div className="col-md-4">
                 <div className="card-xl">

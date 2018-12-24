@@ -31,11 +31,12 @@ router.post('/', (req, res) => {
 					email: req.body.email,
 				});
 
+
 				waitlist.save()
 					.then(data => res.json(data))
 					.catch(err => {
 						return res.json(err)
-					});
+				});
 			}
 		});
 });
