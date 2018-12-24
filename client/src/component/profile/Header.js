@@ -23,11 +23,21 @@ class Header extends Component {
     let social;
     let bio;
     let followers;
+
+    console.log(profile);
     
+    // Check if the user hasn't completed their profile and send them back to 
+    if (profile.experience || profile.bio || profile.education ) {
+    } else {
+      <p>profile must be file.</p>
+    }
+
+
     if (profile.followers) {
       followers = profile.followers.map(f => f._id).length;
     }
-    
+  
+    // Do this action if property is in the object.
     if (profile.experience) {
       experience = (
         <div>
@@ -94,6 +104,7 @@ class Header extends Component {
       )
     }
 
+    // CSS
     const marginBottom = {
       marginBottom: '50px'
     }

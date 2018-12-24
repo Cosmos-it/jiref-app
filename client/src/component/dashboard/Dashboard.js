@@ -12,12 +12,24 @@ import StandAloneProfile from '../postFeeds/StandAloneProfile';
 
 
 class Dashboard extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      interests: ""
+    }
+  }
+
   componentDidMount() {
     this.props.getCurrentProfile();
   }
 
-  onDeleteClick(e) {
+  onDeleteClick = (e) => {
     this.props.deleteAccount();
+  }
+
+  addInterests = (values) => {
+
   }
 
   render() {
@@ -65,14 +77,14 @@ class Dashboard extends Component {
             </p>
             <label className="lead">Interested in what type of mentorship</label>
             <div className="list-item">
-              <button type="button" class="btn btn-default btn-md">Software engineering</button>
-              <button type="button" class="btn btn-primary btn-md">Web dev</button>
-              <button type="button" class="btn btn-primary btn-md">Data science</button>
-              <button type="button" class="btn btn-primary btn-md">Leadership</button>
-              <button type="button" class="btn btn-primary btn-md">Mobile dev</button>
-              <button type="button" class="btn btn-primary btn-md">Career advice</button>
-              <button type="button" class="btn btn-primary btn-md">Career help</button>
-              <button type="button" class="btn btn-primary btn-md">College</button>
+              <button type="button" className="btn btn-default btn-md">Software engineering</button>
+              <button type="button" className="btn btn-primary btn-md">Web dev</button>
+              <button type="button" className="btn btn-primary btn-md">Data science</button>
+              <button type="button" className="btn btn-primary btn-md">Leadership</button>
+              <button type="button" className="btn btn-primary btn-md">Mobile dev</button>
+              <button type="button" className="btn btn-primary btn-md">Career advice</button>
+              <button type="button" className="btn btn-primary btn-md">Career help</button>
+              <button type="button" className="btn btn-primary btn-md">College</button>
             </div>
             <p>Please set a profile.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
