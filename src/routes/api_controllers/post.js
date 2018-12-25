@@ -53,7 +53,6 @@ const DELETE_POST = (Post, Profile, req, res) => {
   Profile.findOne({
     user: req.user.id
   }).then(profile => {
-
     Post.findById(req.params.id)
       .then(post => {
         /// Check for post owner
@@ -110,11 +109,11 @@ const DELETE_A_COMMENT = (Post, req, res) => {
 };
 
 /**
- * 
- * @param {*} Post 
- * @param {*} Profile 
- * @param {*} req 
- * @param {*} res 
+ *
+ * @param {*} Post
+ * @param {*} Profile
+ * @param {*} req
+ * @param {*} res
  */
 const UNLIKE_POST = (Post, Profile, req, res) => {
   Profile.findOne({
@@ -122,8 +121,10 @@ const UNLIKE_POST = (Post, Profile, req, res) => {
   }).then(profile => {
     Post.findById(req.params.id)
       .then(post => {
-        if (post.likes.filter(like => like.user.toString() === req.user.id)
-          .length === 0) {
+        if (
+          post.likes.filter(like => like.user.toString() === req.user.id)
+            .length === 0
+        ) {
           return res.status(400).json({
             notliked: "You have not given thumbs up"
           });
@@ -137,18 +138,20 @@ const UNLIKE_POST = (Post, Profile, req, res) => {
         /// Save
         post.save().then(post => res.json(post));
       })
-      .catch(err => res.status(400).json({
-        postnotfound: "No post found"
-      }));
+      .catch(err =>
+        res.status(400).json({
+          postnotfound: "No post found"
+        })
+      );
   });
-}
+};
 
 /**
- * 
- * @param {*} Post 
- * @param {*} Profile 
- * @param {*} req 
- * @param {*} res 
+ *
+ * @param {*} Post
+ * @param {*} Profile
+ * @param {*} req
+ * @param {*} res
  */
 const LIKE_POST = (Post, Profile, req, res) => {
   Profile.findOne({
@@ -157,8 +160,8 @@ const LIKE_POST = (Post, Profile, req, res) => {
     Post.findById(req.params.id).then(post => {
       console.log("Liked from sever");
       if (
-        post.likes.filter(like => like.user.toString() === req.user.id)
-          .length > 0
+        post.likes.filter(like => like.user.toString() === req.user.id).length >
+        0
       ) {
         return res.status(400).json({
           alreadyliked: "Already liked"
@@ -171,12 +174,12 @@ const LIKE_POST = (Post, Profile, req, res) => {
       post.save().then(post => res.json(post));
     });
   });
-}
+};
 
 /**
- * 
- * @param {*} req 
- * @param {*} res 
+ *
+ * @param {*} req
+ * @param {*} res
  */
 const ADD_COMMENT = (Post, req, res) => {
   Post.findById(req.params.id)
@@ -192,22 +195,28 @@ const ADD_COMMENT = (Post, req, res) => {
       /// Save
       post.save().then(post => res.status(200).json(post));
     })
-    .catch(err => res.status(400).json({
-      postnotfound: "No post found"
-    }));
-}
+    .catch(err =>
+      res.status(400).json({
+        postnotfound: "No post found"
+      })
+    );
+};
 
 /**
- * 
- * @param {*} Post 
- * @param {*} req 
- * @param {*} res 
+ *
+ * @param {*} Post
+ * @param {*} req
+ * @param {*} res
  */
-const DELETE_COMMENT = (Post, req, res) =>{
+const DELETE_COMMENT = (Post, req, res) => {
   Post.findById(req.params.id)
     .then(post => {
       /// Check to see if comment exists
-      if (post.comments.filter(comment => comment._id.toString() === req.params.comment_id).length === 0) {
+      if (
+        post.comments.filter(
+          comment => comment._id.toString() === req.params.comment_id
+        ).length === 0
+      ) {
         return res.status(400).json({
           commentnotexists: "Comment does not exist"
         });
@@ -220,11 +229,12 @@ const DELETE_COMMENT = (Post, req, res) =>{
       post.comments.splice(removeIndex, 1);
       post.save().then(post => res.status(200).json(post));
     })
-    .catch(err => res.status(400).json({
-      postnotfound: "No post found"
-    }));
-}
-
+    .catch(err =>
+      res.status(400).json({
+        postnotfound: "No post found"
+      })
+    );
+};
 
 module.exports = {
   GET_ALL_POSTS,

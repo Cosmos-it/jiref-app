@@ -68,7 +68,6 @@ router.post(
   }
 );
 
-
 router.post(
   "/comment/:id",
   passport.authenticate("jwt", {
@@ -86,15 +85,13 @@ router.post(
   }
 );
 
-/// @desc    Remove comment from post | @route   DELETE api.jiref.com/posts/comment/:id/:comment_id
-/// @access  Private
 router.delete(
   "/comment/:id/:comment_id",
   passport.authenticate("jwt", {
     session: false
   }),
   (req, res) => {
-
+    /// @desc    Remove comment from post | @route   DELETE api.jiref.com/posts/comment/:id/:comment_id
     controllerAPI.DELETE_COMMENT(Post, req, res);
   }
 );

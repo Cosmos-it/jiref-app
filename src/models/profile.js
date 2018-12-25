@@ -12,7 +12,7 @@ const ProfileSchema = new Schema({
   location: { type: String },
   status: { type: String, required: true },
   skills: { type: [String], required: true },
-  interests: { type: [String], required: false},
+  mentorshipInterest: { type: [String], required: false},
   bio: { type: String },
   githubusername: { type: String },
 

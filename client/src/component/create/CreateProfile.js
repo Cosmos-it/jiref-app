@@ -11,12 +11,14 @@ import { createProfile, getCurrentProfile } from "../../actions/profileActions";
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       displaySocialInputs: false,
       me: "",
       company: "",
       website: "",
       location: "",
+      mentorshipInterest: [],
       status: "",
       skills: "",
       githubusername: "",
@@ -25,9 +27,6 @@ class CreateProfile extends Component {
       github: "",
       errors: {}
     };
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -40,7 +39,7 @@ class CreateProfile extends Component {
     }
   }
 
-  onSubmit(e) {
+  onSubmit = e => {
     e.preventDefault();
     const profileData = {
       me: this.state.me,
@@ -49,17 +48,28 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
       skills: this.state.skills,
+      mentorshipInterest: this.state.mentorshipInterest,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       github: this.state.twitter,
       linkedin: this.state.linkedin
     };
     this.props.createProfile(profileData, this.props.history);
+  };
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  addMentorshipInterest(values) {
+    console.log(values)
+    this.setState({ mentorshipInterest: this.state.mentorshipInterest.concat(values)});
+  };
+
+  deleteMentorshipInterest(id) {
+    console.log("Delete: ", id);
   }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
 
   render() {
     const { errors, displaySocialInputs } = this.state;
@@ -88,6 +98,51 @@ class CreateProfile extends Component {
       );
     }
 
+    const mentorship_interests = [
+      { label: "Software engineering" },
+      { label: "Web development" },
+      { label: "Leadership" },
+      { label: "Product management" },
+      { label: "Mobile development" },
+      { label: "Marketing" },
+      { label: "Career development" },
+      { label: "On job mentorship" },
+      { label: "Data science" },
+      { label: "Blockchain" },
+      { label: "Cryptocurrency" }
+    ];
+
+
+    let display;
+    
+    if (this.state.mentorshipInterest) {
+      display = (
+        this.state.mentorshipInterest.map(data =>
+          <button type="button" className="btn btn-danger btn-md" key={data.label} onClick={this.deleteMentorshipInterest.bind(this, data.label)}>
+            {data.label}</button>)
+      );
+    }
+    let interests = (
+      <div>
+        <p>
+          Before you set your account, lets get some information to help
+          personalize your experience on Jiref.
+        </p>
+        <label className="lead">Interested in what type of mentorship</label>
+            <div className="list-item">
+          {
+            mentorship_interests.map(data => 
+            <button type="button" className="btn btn-default btn-md" key={data.label} onClick={this.addMentorshipInterest.bind(this,data)}>{data.label}</button>
+        )}
+        </div>
+        <div>
+          <div className="list-item">
+            {display}
+            </div>
+        </div>
+      </div>
+    );
+
     // Select options for status
     const options = [
       { label: "* Select Professional Status", value: 0 },
@@ -109,8 +164,7 @@ class CreateProfile extends Component {
               <div className="">
                 <div className="card-body">
                   <Link to="/dashboard">Go Back</Link>
-                  <p className="lead text-center">Create profile</p>{" "}
-                  <small className="d-block pb-3">* = required fields</small>
+                  <p className="text-center">Create profile</p> {interests}
                   <form onSubmit={this.onSubmit}>
                     <TextFieldGroup
                       placeholder="* Profile Handle"
