@@ -20,6 +20,7 @@ class EditProfile extends Component {
       location: "",
       status: "",
       skills: "",
+      mentorshipInterest:"",
       githubusername: "",
       bio: "",
       linkedin: "",
@@ -45,6 +46,7 @@ class EditProfile extends Component {
 
       // Bring skills array back to CSV
       const skillsCSV = profile.skills.join(",");
+      const mentorshipInterestCSV = profile.mentorshipInterest.join(",");
 
       // If profile field doesnt exist, make empty string
       profile.company = !isEmpty(profile.company) ? profile.company : "";
@@ -79,6 +81,7 @@ class EditProfile extends Component {
         location: profile.location,
         status: profile.status,
         skills: skillsCSV,
+        mentorshipInterest: mentorshipInterestCSV,
         githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
@@ -97,6 +100,7 @@ class EditProfile extends Component {
       website: this.state.website,
       location: this.state.location,
       status: this.state.status,
+      mentorshipInterest: this.state.mentorshipInterest,
       skills: this.state.skills,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
@@ -162,8 +166,17 @@ class EditProfile extends Component {
 
               <h3 className="text-center">Edit Profile</h3>
 
-
                 <form onSubmit={this.onSubmit}>
+                <TextFieldGroup
+                    placeholder="* Mentorship interests"
+                    name="mentorshipInterest"
+                    value={this.state.mentorshipInterest}
+                    onChange={this.onChange}
+                    error={errors.mentorshipInterest}
+                    info="Please use comma separated values (eg.
+                    HTML,CSS,JavaScript,PHP"
+                  />
+
                   <TextFieldGroup
                     placeholder="* Profile Handle"
                     name="me"

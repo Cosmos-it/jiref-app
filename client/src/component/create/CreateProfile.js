@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import classnames from "classnames";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "../common/TextFieldGroup";
@@ -48,7 +49,7 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
       skills: this.state.skills,
-      mentorshipInterest: this.state.mentorshipInterest,
+      mentorshipInterest: this.state.mentorshipInterest.join(','),
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       github: this.state.twitter,
@@ -61,19 +62,36 @@ class CreateProfile extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  addMentorshipInterest(values) {
-    console.log(values)
-    this.setState({ mentorshipInterest: this.state.mentorshipInterest.concat(values)});
-  };
+  addMentorshipInterest(item) {
+    // Check for duplicates.
+    if (this.state.mentorshipInterest.length == 0) {
+      this.setState({
+        mentorshipInterest: [...this.state.mentorshipInterest, item]
+      });
+    }
 
-  deleteMentorshipInterest(id) {
-    console.log("Delete: ", id);
+    this.state.mentorshipInterest.filter(i => {
+      console.log(item, i);
+      if (i !== item) {
+        this.setState({
+          mentorshipInterest: [...this.state.mentorshipInterest, item]
+        });
+      }
+    });
   }
 
+  deleteMentorshipInterest(detetItem) {
+    this.setState({
+      mentorshipInterest: this.state.mentorshipInterest.filter(function(item) {
+        return item !== detetItem;
+      })
+    });
+  }
 
   render() {
     const { errors, displaySocialInputs } = this.state;
     let socialInputs;
+
     if (displaySocialInputs) {
       socialInputs = (
         <div>
@@ -99,29 +117,34 @@ class CreateProfile extends Component {
     }
 
     const mentorship_interests = [
-      { label: "Software engineering" },
-      { label: "Web development" },
-      { label: "Leadership" },
-      { label: "Product management" },
-      { label: "Mobile development" },
-      { label: "Marketing" },
-      { label: "Career development" },
-      { label: "On job mentorship" },
-      { label: "Data science" },
-      { label: "Blockchain" },
-      { label: "Cryptocurrency" }
+      "Software engineering",
+      "Web development",
+      "Leadership",
+      "Product management",
+      "Mobile development",
+      "Marketing",
+      "Career development",
+      "On job mentorship",
+      "Data science",
+      "Blockchain",
+      "Cryptocurrency"
     ];
 
-
     let display;
-    
+
     if (this.state.mentorshipInterest) {
-      display = (
-        this.state.mentorshipInterest.map(data =>
-          <button type="button" className="btn btn-danger btn-md" key={data.label} onClick={this.deleteMentorshipInterest.bind(this, data.label)}>
-            {data.label}</button>)
-      );
+      display = this.state.mentorshipInterest.map(data => (
+        <button
+          type="button"
+          className="btn btn-danger btn-md"
+          key={data}
+          onClick={this.deleteMentorshipInterest.bind(this, data)}
+        >
+          {data}
+        </button>
+      ));
     }
+
     let interests = (
       <div>
         <p>
@@ -129,16 +152,22 @@ class CreateProfile extends Component {
           personalize your experience on Jiref.
         </p>
         <label className="lead">Interested in what type of mentorship</label>
-            <div className="list-item">
-          {
-            mentorship_interests.map(data => 
-            <button type="button" className="btn btn-default btn-md" key={data.label} onClick={this.addMentorshipInterest.bind(this,data)}>{data.label}</button>
-        )}
+        <div className="list-item">
+          {mentorship_interests.map(data => (
+            <button
+              type="button"
+              className={classnames("btn btn-default btn-md", {
+                "btn-success": data
+              })}
+              key={data}
+              onClick={this.addMentorshipInterest.bind(this, data)}
+            >
+              {data}
+            </button>
+          ))}
         </div>
         <div>
-          <div className="list-item">
-            {display}
-            </div>
+          <div className="list-item">{display}</div>
         </div>
       </div>
     );

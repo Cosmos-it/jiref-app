@@ -10,7 +10,6 @@ import { deleteProject } from '../../actions/profileActions';
 
 class Project extends Component {
   onDeleteClick(id) {
-    console.log("deleteing...")
     this.props.deleteProject(id);
   }
 

@@ -153,6 +153,7 @@ router.post("/", passport.authenticate("jwt", { session: false }), (req, res) =>
   profileValues.user = req.user.id;
   if (req.body.me) profileValues.me = req.body.me;
   if (req.body.company) profileValues.company = req.body.company;
+  if (req.body.mentorshipInterest) profileValues.mentorshipInterest = req.body.mentorshipInterest;
   if (req.body.website) profileValues.website = req.body.website;
   if (req.body.location) profileValues.location = req.body.location;
   if (req.body.bio) profileValues.bio = req.body.bio;

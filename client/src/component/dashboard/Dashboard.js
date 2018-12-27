@@ -9,6 +9,7 @@ import Education from './Education';
 import Experience from './Experience';
 import Project from './Project';
 import StandAloneProfile from '../postFeeds/StandAloneProfile';
+import CompleteProfile from '../common/CompleteProfile';
 
 
 class Dashboard extends Component {
@@ -25,8 +26,10 @@ class Dashboard extends Component {
 
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
+    console.log(profile);
 
     let dashboardContent;
+    let completeProfile;
 
     if (profile == null || loading) {
       dashboardContent = <Spinner />;
@@ -57,6 +60,9 @@ class Dashboard extends Component {
             </div>
           </div>
         )
+        if (Object.keys(profile.experience).length < 1) {
+          completeProfile = <CompleteProfile/>
+        } 
 
       } else {
         dashboardContent = (
@@ -71,9 +77,11 @@ class Dashboard extends Component {
       }
     }
 
+     
     return (
       <div className="container">
         <div className="row">
+          {completeProfile}
           <div className="col-md-8 m-auto">
             <label className="display-6"><i className="fas fa-bars"></i> {' '}Dashboard</label>
             {dashboardContent}
