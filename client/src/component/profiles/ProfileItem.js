@@ -10,12 +10,12 @@ class ProfileItem extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-10 m-auto">
-            <Link to={`/profile/me/${profile.me}`} className="row jiref-padding jiref-post-bg jiref-margin-bottom profile-item">
+            <Link to={`/profile/me/${profile.me}`} className="row jiref-padding jiref-margin-bottom profile-item">
               <div className="col-2 ">
                 <img src={profile.user.avatar} alt="" className="rounded-circle" />
               </div>
-
-              <div className="col-lg-6 col-md-4 col-8">
+              
+              <div className="col-md-4">
                 <label className="label-style">{profile.user.name}</label>
                 <p>{
                   profile.status}{' '}
