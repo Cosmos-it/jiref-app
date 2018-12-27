@@ -16,7 +16,7 @@ class ProfileItem extends Component {
               </div>
               
               <div className="col-md-4">
-                <label className="label-style">{profile.user.name}</label>
+                <p className="label-style">{profile.user.name}</p>
                 <p>{
                   profile.status}{' '}
                   {
