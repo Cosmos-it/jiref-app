@@ -48,11 +48,10 @@ class AddProject extends Component {
     return (
       <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto">
-            <div className="">
+          <div className="col-md-8 m-auto jiref-bg">
               <div className="card-body">
-                <Link to="/dashboard" className="">
-                  Go Back
+                <Link to="/dashboard">
+                <i class="fas fa-angle-left"></i>{' '}Back
                 </Link>
 
                 <div className="text-center">
@@ -102,7 +101,6 @@ class AddProject extends Component {
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

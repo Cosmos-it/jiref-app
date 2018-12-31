@@ -41,8 +41,8 @@ class PostItem extends Component {
 
 
     return (
-      <div className="container">
       
+      <div className="container jiref-bg" style={{ marginBottom: '10px', padding: '10px' }}>
         <div className="jiref-profile-image">
           <img src={post.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
           <div className="jiref-post-header">
@@ -52,44 +52,30 @@ class PostItem extends Component {
 
         <div className="jiref-post-content">
           <p>{post.text}</p>
-          <div className="jiref-likes">
-          </div>
+          <div className="jiref-likes">Likes{' '}{post.likes.length}</div>
         </div>
 
-        <div className="jiref-post-functions">
-          <div className="jiref-post-footer">
-            <span className="like">
-              <button onClick={this.onLikeClick.bind(this, post._id)}
-                type="button" className="mr-1 like-btn">
-                <i className={classnames('fas fa-thumbs-up', {'text-info': this.findUserLike(post)})}
-                />
-                {' '}<span className="badge badge-info">{post.likes.length}</span>
-
-              </button>
-
-              <button
-                onClick={this.onUnlikeClick.bind(this, post._id)}
-                type="button"
-                className="mr-1 like-btn">
-                <i className="text-secondary fas fa-thumbs-down" />
-              </button>
-            </span>
-
-            <span className="like">
-              <Link to={`/post/${post._id}`} className="like"><i className="far fa-comment" /> {' '}Comment</Link>
-              {post.user === auth.user.id ? (
-                <button
-                  onClick={this.onDeleteClick.bind(this, post._id)}
-                  type="button"
-                  className="mr-1 like-btn delete">
-                  <i className="fas fa-trash" />{' '} Delete
+        <span className="like">
+          <button onClick={this.onLikeClick.bind(this, post._id)}
+            type="button">
+            <i className={classnames('fas fa-thumbs-up', { 'text-info': this.findUserLike(post) })}/>
+          </button>
+          <button
+            onClick={this.onUnlikeClick.bind(this, post._id)}
+            type="button">
+            <i className="text-secondary fas fa-thumbs-down" />
+          </button>
+          <Link to={`/post/${post._id}`} className="like"><i className="fas fa-reply" /></Link>
+          {post.user === auth.user.id ? (
+            <button
+              onClick={this.onDeleteClick.bind(this, post._id)}
+              type="button"
+              className="delete">
+              <i className="fas fa-trash" />{' '} Delete
                    </button>
-              ) : null}
-            </span>
-          </div>
-        </div>
+          ) : null}
+        </span>
       </div>
-
     )
   }
 }

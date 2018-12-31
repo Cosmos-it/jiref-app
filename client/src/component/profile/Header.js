@@ -153,7 +153,7 @@ class Header extends Component {
       <div className="container">
         <div className="row">
           {completeProfile}
-          <div className="col-md-8 m-auto">
+          <div className="col-md-8 m-auto jiref-bg">
             <div className="row jiref-padding">
 
               <div className="col-md-12 m-auto text-center">

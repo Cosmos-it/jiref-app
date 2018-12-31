@@ -159,10 +159,12 @@ class EditProfile extends Component {
     return (
       <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto">
+          <div className="col-md-8 m-auto jiref-bg">
             <div className="">
               <div className="card-body">
-              <Link to="/dashboard">Go Back</Link>
+                <Link to="/dashboard">
+                <i class="fas fa-angle-left"></i>{' '}Back
+                </Link>
 
               <h3 className="text-center">Edit Profile</h3>
 

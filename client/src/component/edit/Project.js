@@ -66,7 +66,7 @@ class EditProject extends Component {
     return (
       <div className="container bottom">
         <div className="row">
-          <div className="col-md-8 m-auto">
+          <div className="col-md-8 m-auto jiref-bg">
             <div className="">
               <div className="card-body">
                 <Link to="/dashboard">Go Back</Link>

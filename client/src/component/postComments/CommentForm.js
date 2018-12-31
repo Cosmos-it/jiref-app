@@ -46,8 +46,8 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="card-s">
-      <div className="jiref-post-bg">
+      <div className="jiref-bg">
+        
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -65,7 +65,6 @@ class CommentForm extends Component {
             </form>
           </div>
         </div>
-      </div>
     );
   }
 }

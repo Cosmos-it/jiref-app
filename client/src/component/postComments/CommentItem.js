@@ -14,7 +14,7 @@ class CommentItem extends Component {
     const { comment, postId, auth } = this.props;
 
     return (
-      <div className="card-s">
+      <div className="card-s jiref-bg">
           <div>
             <div className="jiref-profile-image">
               <img src={comment.avatar}
@@ -33,8 +33,6 @@ class CommentItem extends Component {
             <div className="jiref-post-content">
               <p className="lead">{comment.text}</p>
             </div>
-
-            <div className="jiref-post-functions">
             <div className="jiref-post-footer">
                 <span className="like">
                   {comment.user === auth.user.id ? (
@@ -49,7 +47,7 @@ class CommentItem extends Component {
               </div>
             </div>
             </div>
-          </div>
+ 
 
     );
   }

@@ -91,14 +91,13 @@ class EditEducation extends Component {
     return (
       <div className="container bottom">
           <div className="row">
-            <div className="col-md-8 m-auto jiref-post-bg">
-            <div className="">
+            <div className="col-md-8 m-auto jiref-bg">
               <div className="card-body">
               <Link to="/dashboard">
-                Go Back
-              </Link>
+                  <i class="fas fa-angle-left"></i>{' '}Back
+                </Link>
+                
               <h3 className="display-6 text-center">Edit Education</h3>
-  
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* School"
@@ -176,7 +175,6 @@ class EditEducation extends Component {
               </div>
             </div>
           </div>
-        </div>
     )
   }
 }

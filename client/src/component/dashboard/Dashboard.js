@@ -81,8 +81,8 @@ class Dashboard extends Component {
       <div className="container">
         <div className="row">
           {completeProfile}
-          <div className="col-md-8 m-auto">
-            <label className="display-6"><i className="fas fa-bars"></i> {' '}Dashboard</label>
+          <div className="col-md-8 m-auto jiref-bg card-body">
+            <i className="fas fa-bars"></i> {' '}Dashboard
             {dashboardContent}
           </div>
         </div>
