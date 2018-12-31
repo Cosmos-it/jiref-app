@@ -47,7 +47,6 @@ class CommentForm extends Component {
 
     return (
       <div className="jiref-bg">
-        
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -59,7 +58,7 @@ class CommentForm extends Component {
                   error={errors.text}
                 />
               </div>
-              <div className="jiref-padding">
+              <div className="">
               <button type="subtmit" value="Share" className="jiref-button-sm">post</button>
             </div>
             </form>

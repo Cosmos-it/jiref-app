@@ -41,8 +41,9 @@ class PostItem extends Component {
 
 
     return (
-      
+
       <div className="container jiref-bg" style={{ marginBottom: '10px', padding: '10px' }}>
+        
         <div className="jiref-profile-image">
           <img src={post.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
           <div className="jiref-post-header">
@@ -60,11 +61,13 @@ class PostItem extends Component {
             type="button">
             <i className={classnames('fas fa-thumbs-up', { 'text-info': this.findUserLike(post) })}/>
           </button>
+
           <button
             onClick={this.onUnlikeClick.bind(this, post._id)}
             type="button">
             <i className="text-secondary fas fa-thumbs-down" />
           </button>
+
           <Link to={`/post/${post._id}`} className="like"><i className="fas fa-reply" /></Link>
           {post.user === auth.user.id ? (
             <button

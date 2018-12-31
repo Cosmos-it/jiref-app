@@ -5,50 +5,41 @@ import { deleteComment } from "../../actions/postAction";
 import { Link } from "react-router-dom";
 
 class CommentItem extends Component {
-  
+
   onDeleteClick(postId, commentId) {
     this.props.deleteComment(postId, commentId);
   }
 
   render() {
     const { comment, postId, auth } = this.props;
-
+    const margin = { padding: '20px' }
     return (
-      <div className="card-s jiref-bg">
-          <div>
-            <div className="jiref-profile-image">
-              <img src={comment.avatar}
-                alt="profile"
-                className="rounded-circle rounded-circle-post"
-              />
-              <div className="jiref-post-header">
-                <p>
-                  <Link to={`/profile/user/${auth.user.id}`}>
-                    {comment.name}
-                  </Link>
-                </p>
-              </div>
-            </div>
+      <div className="jiref-bg" style={margin}>
+        <div className="jiref-profile-image">
+          <img src={comment.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
+          <div className="jiref-post-header">
+            <p>
+              <Link to={`/profile/user/${auth.user.id}`}>
+                {comment.name}
+              </Link>
+            </p>
+          </div>
+        </div>
 
-            <div className="jiref-post-content">
-              <p className="lead">{comment.text}</p>
-            </div>
-            <div className="jiref-post-footer">
-                <span className="like">
-                  {comment.user === auth.user.id ? (
-                    <button
-                      onClick={this.onDeleteClick.bind(this,postId,comment._id)}
-                      type="button"
-                      className="mr-1 like-btn delete">
-                      <i className="fas fa-trash" /> Delete
-                    </button>
-                  ) : null}
-                </span>
-              </div>
-            </div>
-            </div>
- 
-
+        <div className="jiref-post-content">
+          <p className="lead">{comment.text}</p>
+        </div>
+        <span className="like jiref-padding">
+          {comment.user === auth.user.id ? (
+            <button
+              onClick={this.onDeleteClick.bind(this, postId, comment._id)}
+              type="button"
+              className="mr-1 delete">
+              <i className="fas fa-trash" />
+            </button>
+          ) : null}
+        </span>
+      </div>
     );
   }
 }
