@@ -27,7 +27,9 @@ export default class About extends Component {
 
               <h2>Who is Jiref for?</h2>
               <ul>
-
+              <li className="lead">
+                  Tech, banking, and marketing professionals who enjoy mentoring others.
+                </li>
                 <li className="lead">
                   Recent grads from colleges, bootcamps who might be lookng for first time job or internship.
                 </li>
