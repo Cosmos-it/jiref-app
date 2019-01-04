@@ -163,30 +163,8 @@ label {
   margin-top: -20px;
   background-size: cover;
   height: 100vh;
-  background: radial-gradient(black 3px, transparent 4px),
-    radial-gradient(black 3px, transparent 4px),
-    linear-gradient(#fff 4px, transparent 0),
-    linear-gradient(
-      45deg,
-      transparent 74px,
-      transparent 75px,
-      #a4a4a4 75px,
-      #a4a4a4 76px,
-      transparent 77px,
-      transparent 109px
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 75px,
-      transparent 76px,
-      #a4a4a4 76px,
-      #a4a4a4 77px,
-      transparent 78px,
-      transparent 109px
-    ),
-    #fff;
-  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background: url("./assets/img/diverse.jpeg") center center no-repeat;
+  background-size: cover;
 }
 
 /* .module-cover {
@@ -209,7 +187,7 @@ label {
   margin-bottom: 70px;
   left: 0;
   top: 0;
-  background: url("./assets/img/1diverse.jpeg") center center no-repeat;
+  background: url("./assets/img/people-1.jpeg") center center no-repeat;
   background-size: cover;
   height: 20vh;
 }
@@ -217,7 +195,7 @@ label {
 .login-background {
   margin-top: -20px;
   left: 0;
-  background: url("./assets/img/people-1.jpeg") center center no-repeat;
+  background: url("./assets/img/diverse.jpeg") center center no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -553,8 +531,9 @@ button {
   padding-top: 10px;
 }
 
-.jiref-post-header p {
-  font-size: 15px;
+.jiref-post-header p a{
+  font-size: 13px;
+  color: #35435a;
 }
 
 .jiref-post-functions {
@@ -574,7 +553,7 @@ button {
 
 .like {
   display: inline;
-  padding: 20px;
+  padding-top: 20px;
   font-size: 10px;
 }
 

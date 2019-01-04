@@ -6,7 +6,6 @@ import Footer from "./Footer";
 import Modal from "../common/Modal";
 
 class LandingNew extends Component {
-  
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
@@ -26,7 +25,7 @@ class LandingNew extends Component {
     const coming = {
       marginTop: "80px",
       marginBottom: "80px",
-      padding: '40px',
+      padding: "40px",
       textAlign: "center"
     };
 
@@ -38,12 +37,18 @@ class LandingNew extends Component {
             <div className="row">
               <div className="col-md-10 m-auto text-center">
                 <div className="blockquote">
-                  <p>Gain invaluable skills on Jiref</p>
+                  <p>Global knowledge mentorship connections</p>
                 </div>
                 <br />
-                <Link to="/waitlist" id="btn" className="btn btn-lg btn-primary button-join" onClick={this.showModal}>
+                {/* <Link
+                  to="/waitlist"
+                  id="btn"
+                  className="btn btn-lg btn-primary button-join"
+                  onClick={this.showModal}
+                >
                   <span style={{ textTransform: "" }}>Join beta today</span>
-                </Link>
+
+                </Link> */}
                 {/* Modal testing */}
                 <Modal show={this.state.isOpen}>
                   <p>Modal</p>
@@ -58,14 +63,18 @@ class LandingNew extends Component {
 
         <div className="row">
           <div className="col-md-12" style={coming}>
-            <h5>
-              Join the knowledge movement to build mpressive portfolio.
-            </h5>
+            <h5>Join the knowledge movement to build mpressive portfolio.</h5>
 
-            <p className="lead">Wikipedia definition <br/>
-            <i><q>Mentorship is a relationship in which a more experienced or more knowledgeable person helps <br/>to guide a less experienced or less knowledgeable person</q>
-            </i></p>
-   
+            <p className="lead">
+              Wikipedia definition <br />
+              <i>
+                <q>
+                  Mentorship is a relationship in which a more experienced or
+                  more knowledgeable person helps <br />
+                  to guide a less experienced or less knowledgeable person
+                </q>
+              </i>
+            </p>
           </div>
         </div>
 
@@ -77,13 +86,14 @@ class LandingNew extends Component {
             <h2>Areas of focus</h2>
             <div>
               <ul className="list-group">
-                <li className="list-group-item">Software/Application development</li>
+                <li className="list-group-item">
+                  Software/Application development
+                </li>
                 <li className="list-group-item">Product management</li>
                 <li className="list-group-item">Product marketing</li>
                 <li className="list-group-item">Leadership</li>
                 <li className="list-group-item">Interview practice</li>
                 <li className="list-group-item">Self development</li>
-     
               </ul>
             </div>
           </div>
@@ -92,17 +102,18 @@ class LandingNew extends Component {
         {/* <!-- Posts--> */}
         <section className="module">
           <div className="container">
-          <h2>The process</h2>
-          <br/>
+            <h2>The process</h2>
+            <br />
             <div className="row text-center">
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                  <i className="far fa-thumbs-up card-icon" />
+                    <i className="far fa-thumbs-up card-icon" />
                     <h4>Meet a mentor</h4>
                     <p className="overlay">
-                      Connect with a mentor to seek guidiance. 
-                      Mentorship exposes you to specific skills that might help you nagivate life/career.
+                      Connect with a mentor to seek guidiance. Mentorship
+                      exposes you to specific skills that might help you
+                      nagivate life/career.
                     </p>
                   </div>
                 </div>
@@ -113,7 +124,9 @@ class LandingNew extends Component {
                     <i className="fas fa-tasks card-icon" />
                     <h4>Create an objective</h4>
                     <p className="overlay">
-                      Discuss your career aspirations in software engineering/development, marketing, product management, coachingetc.
+                      Discuss your career aspirations in software
+                      engineering/development, marketing, product management,
+                      coachingetc.
                     </p>
                   </div>
                 </div>
@@ -121,10 +134,12 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                  <i className="fas fa-users card-icon" />
+                    <i className="fas fa-users card-icon" />
                     <h4>Join mastermind</h4>
                     <p className="overlay">
-                      Join groups to brainstorm ideas and start crafting meaningful thoughts as you learn to be a team of player.
+                      Coming soon...<br/>
+                      Join groups to brainstorm ideas and start crafting
+                      meaningful thoughts as you learn to be a team of player.
                     </p>
                   </div>
                 </div>
@@ -132,10 +147,12 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                  <i className="fas fa-book card-icon" />
+                    <i className="fas fa-book card-icon" />
                     <h4>Build projects</h4>
                     <p className="overlay">
-                      Improving your skills requires lots of practice and mistakes. The industry is moving in the "speed of light", don't be left behind.
+                      Improving your skills requires lots of practice and
+                      mistakes. The industry is moving in the "speed of light",
+                      don't be left behind.
                     </p>
                   </div>
                 </div>
@@ -143,29 +160,15 @@ class LandingNew extends Component {
               <div className="col-md-4">
                 <div className="card-xl">
                   <div className="card-body mb-10">
-                  <i className="far fa-lightbulb card-icon" />
+                    <i className="far fa-lightbulb card-icon" />
                     <h4>Learn new things</h4>
                     <p className="overlay">
-                      Keep learning new things and let your curiosity drive you forward. 
-                      Don't be too comfortable in one place.
+                      Keep learning new things and let your curiosity drive you
+                      forward. Don't be too comfortable in one place.
                     </p>
                   </div>
                 </div>
               </div>
-
-              {/* <div className="col-md-4">
-                <div className="card-xl">
-                  <div className="card-body mb-10 ">
-                    <h4>BECOME SUCCESSFUL</h4>
-                    <i className="fas fa-trophy card-icon" />
-                    <p className="overlay">
-                      Continue to challenge yourself and ask mentors to help you in areas of
-                      unfamiliarity so you succeed at work and outside of work.
-                      Make it a habit and develop with passion.
-                    </p>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>

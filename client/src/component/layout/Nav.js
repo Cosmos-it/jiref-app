@@ -10,7 +10,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       toggleMenu: false
-    }
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -20,27 +20,27 @@ class Navbar extends Component {
     this.props.logoutUser();
   }
 
-
   handleClick() {
     console.log(this.state.toggleMenu);
     this.setState({ toggleMenu: !this.state.toggleMenu });
-
   }
 
   render() {
     let slideClass;
-    this.state.toggleMenu ? slideClass = 'slideInLeft slide-menu' : slideClass = 'slideInRight';
+    this.state.toggleMenu
+      ? (slideClass = "slideInLeft slide-menu")
+      : (slideClass = "slideInRight");
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
       <ul className="nav justify-content-end">
         <li className="nav-item">
-          <Link className="nav-link" to="/feed" data-toggle="offcanvas" >
+          <Link className="nav-link" to="/feed" data-toggle="offcanvas">
             Home{" "}
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/profiles" data-toggle="offcanvas" >
+          <Link className="nav-link" to="/profiles" data-toggle="offcanvas">
             Connect{" "}
           </Link>
         </li>
@@ -67,14 +67,21 @@ class Navbar extends Component {
           </a>
 
           <div className="dropdown-menu" aria-labelledby="dropdown01">
-            <a className="dropdown-item" href="" data-toggle="offcanvas" >
+            <a className="dropdown-item" href="" data-toggle="offcanvas">
               Another action
             </a>
-            <a className="dropdown-item" href="/dashboard" data-toggle="offcanvas" >
-              <i className="fas fa-bars"></i> {' '}Dashboard
+            <a
+              className="dropdown-item"
+              href="/dashboard"
+              data-toggle="offcanvas"
+            >
+              <i className="fas fa-bars" /> Dashboard
             </a>
-            <a className="dropdown-item"
-              onClick={this.onLogoutClick.bind(this)}><i className="fas fa-sign-out-alt"></i>{' '}Logout
+            <a
+              className="dropdown-item"
+              onClick={this.onLogoutClick.bind(this)}
+            >
+              <i className="fas fa-sign-out-alt" /> Logout
             </a>
           </div>
         </li>
@@ -82,15 +89,14 @@ class Navbar extends Component {
     );
 
     const guestLinks = (
-      
       <ul className="nav justify-content-end">
-       <li className="nav-item">
+        <li className="nav-item">
           <Link className="nav-link" data-toggle="offcanvas" to="/about">
             About Us{" "}
           </Link>
         </li>
 
-      <li className="nav-item">
+        <li className="nav-item">
           <Link className="nav-link" data-toggle="offcanvas" to="/register">
             Sign Up{" "}
           </Link>
@@ -103,20 +109,24 @@ class Navbar extends Component {
       </ul>
     );
     const navbar = (
-
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div className="container">
           <a className="navbar-brand mr-auto mr-lg-0" href="/">
             Jíref
           </a>
-          <button className="navbar-toggler p-0 border-0"
+          <button
+            className="navbar-toggler p-0 border-0"
             type="button"
-            data-toggle="offcanvas" onClick={this.handleClick}>
+            data-toggle="offcanvas"
+            onClick={this.handleClick}
+          >
             <span className="navbar-toggler-icon" />
           </button>
 
-          <div className="navbar-collapse offcanvas-collapse"
-            id="navbarsExampleDefault">
+          <div
+            className="navbar-collapse offcanvas-collapse"
+            id="navbarsExampleDefault"
+          >
             <ul className="navbar-nav mr-auto" />
             <div className="my-2 my-lg-0">
               {isAuthenticated ? authLinks : guestLinks}
@@ -127,15 +137,24 @@ class Navbar extends Component {
     );
 
     const currentWorkingNav = (
-      <nav className="navbar navbar-light bg-light justify-content-between" id="navbar">
-      <div className="container">
-        <Link className="logo" to={'/'} style={{ 'fontSize': '1.5rem', 'fontWeight': 'bold' }}><p>JIREF</p></Link>
-          {isAuthenticated ? authLinks : guestLinks}  
-      </div>
+      <nav
+        className="navbar navbar-light bg-light justify-content-between"
+        id="navbar"
+      >
+        <div className="container">
+          <Link
+            className="logo"
+            to={"/"}
+            style={{ fontSize: "1.5rem", fontWeigsht: "bold" }}
+          >
+            <p>JIREF</p>
+          </Link>
+          {isAuthenticated ? authLinks : guestLinks}
+        </div>
       </nav>
     );
 
-    return (<div>{currentWorkingNav}</div>)
+    return <div>{currentWorkingNav}</div>;
   }
 }
 

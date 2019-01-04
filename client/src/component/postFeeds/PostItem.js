@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { deletePost, addLike, removeLike } from '../../actions/postAction';
 import Post from '../postComments/Post';
+import Moment from 'moment';
+
 
 class PostItem extends Component {
 
@@ -38,37 +40,36 @@ class PostItem extends Component {
 
   render() {
     const { post, auth } = this.props;
-
+    Moment.locale('en');
 
     return (
 
       <div className="container jiref-bg" style={{ marginBottom: '10px', padding: '10px' }}>
-        
         <div className="jiref-profile-image">
           <img src={post.avatar} alt="profile" className="rounded-circle rounded-circle-post" />
           <div className="jiref-post-header">
-            <p><Link to={`/profile/user/${post.user}`}>{post.name}</Link></p>
+            <p><Link to={`/profile/user/${post.user}`}>{post.name}</Link> <br /> <span style={{ fontSize: '10px' }}>Posted on {' '}{Moment(post.date).format('d MMM')}</span></p>
           </div>
         </div>
 
         <div className="jiref-post-content">
           <p>{post.text}</p>
-          <div className="jiref-likes">Likes{' '}{post.likes.length}</div>
+          <div className="jiref-likes"><i className="far fa-heart"></i>{' '}{post.likes.length} <span style={{ paddingLeft: '10px' }}><Link to={`/post/${post._id}`} className="like"><i className="fas fa-comment" />{' '}{post.comments.length}</Link></span></div>
         </div>
 
         <span className="like">
           <button onClick={this.onLikeClick.bind(this, post._id)}
             type="button">
-            <i className={classnames('fas fa-thumbs-up', { 'text-info': this.findUserLike(post) })}/>
+            <i className={classnames('far fa-heart', { 'text-info': this.findUserLike(post) })} />
           </button>
 
-          <button
+          {/* <button
             onClick={this.onUnlikeClick.bind(this, post._id)}
             type="button">
             <i className="text-secondary fas fa-thumbs-down" />
-          </button>
+          </button> */}
 
-          <Link to={`/post/${post._id}`} className="like"><i className="fas fa-reply" /></Link>
+          <span style={{ paddingLeft: '10px' }}> <Link to={`/post/${post._id}`} className="like">Reply</Link></span>
           {post.user === auth.user.id ? (
             <button
               onClick={this.onDeleteClick.bind(this, post._id)}

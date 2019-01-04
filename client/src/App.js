@@ -69,7 +69,6 @@ class App extends Component {
             <Route exact path="/jobs" component={Jobs} />
             <Route exact path="/projects" component={SuggestedProjects} />
 
-
             <Switch>
               <PrivateRoute exact path="/profiles" component={Profiles} />
               <PrivateRoute exact path="/profile/me/:me" component={Profile} />
@@ -90,6 +89,7 @@ class App extends Component {
           </div>
         </Router>
       </Provider>
+
     );
   }
 }
