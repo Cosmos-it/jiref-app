@@ -63,10 +63,10 @@ class LandingNew extends Component {
 
         <div className="row">
           <div className="col-md-12" style={coming}>
-            <h5>Join the knowledge movement to build mpressive portfolio.</h5>
+            <h5>Build impressive portfolio of knowledge.</h5>
 
             <p className="lead">
-              Wikipedia definition <br />
+              Wikipedia definition of mentorship <br />
               <i>
                 <q>
                   Mentorship is a relationship in which a more experienced or
